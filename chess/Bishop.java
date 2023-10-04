@@ -1,15 +1,19 @@
 package chess;
 import java.util.ArrayList;
-import java.util.LinkedHashSet;
 
-import chess.ReturnPiece.PieceFile;
 import chess.ReturnPiece.PieceType;
 
 public class Bishop {
-    
+
     public static boolean checkLegal(Position end, ReturnPiece b, ArrayList<ReturnPiece> piecesOnBoard){
-        
-        return true;
+        Position start = Position.getPosition(b);
+        if(start.sameSquare(end)) return false;
+        int diagDirection = Position.whichDiag(start, end);
+        if(diagDirection == -1) return false;
+        if(diagDirection == 1) return Position.btwnDiag(start, farthestLeftUpDiag(b, piecesOnBoard), end);
+        else if(diagDirection == 2) return Position.btwnDiag(start, farthestRightUpDiag(b, piecesOnBoard), end);
+        else if(diagDirection == 3) return Position.btwnDiag(start, farthestRightDownDiag(b, piecesOnBoard), end);
+        else return Position.btwnDiag(start, farthestLeftDownDiag(b, piecesOnBoard), end);
     }
 
     //returns null if can't move in left up diag direction
@@ -17,7 +21,7 @@ public class Bishop {
         //start from closest leftUpDiag and check if another piece is in that spot
         /**if yes, if piece is opponent's and not king, then valid move: capturing, can't move beyond
     -- else can't land on that square and beyond **/
-        Position start = new Position(b.pieceRank, b.pieceFile);
+        Position start = Position.getPosition(b);
         Position prevSquare = null; //previous possible landing square
         Position square = start.leftUpDiag();
         while(square != null){
