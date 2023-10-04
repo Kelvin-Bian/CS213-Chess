@@ -1,14 +1,87 @@
 package chess;
 import java.util.ArrayList;
+import java.util.LinkedHashSet;
+
+import chess.ReturnPiece.PieceFile;
+import chess.ReturnPiece.PieceType;
 
 public class Bishop {
     
-    public static boolean legalMove(ReturnPiece b){
+    public static boolean checkLegal(Position end, ReturnPiece b, ArrayList<ReturnPiece> piecesOnBoard){
+        
         return true;
     }
 
-    public static ArrayList<Position> possibleMoves(ReturnPiece b, ArrayList<ReturnPiece> pieces){
-        ArrayList<Position> p = new ArrayList<Position>();
-        
+    //returns null if can't move in left up diag direction
+    public static Position farthestLeftUpDiag(ReturnPiece b, ArrayList<ReturnPiece> piecesOnBoard){
+        //start from closest leftUpDiag and check if another piece is in that spot
+        /**if yes, if piece is opponent's and not king, then valid move: capturing, can't move beyond
+    -- else can't land on that square and beyond **/
+        Position start = new Position(b.pieceRank, b.pieceFile);
+        Position prevSquare = null; //previous possible landing square
+        Position square = start.leftUpDiag();
+        while(square != null){
+            for(ReturnPiece p: piecesOnBoard){ 
+                if(square.sameSquare(p))    //check if any pieces are in this left up diag square
+                    return (!piecesOfSameSide(p, b) && !isKing(p))? square : prevSquare;
+            }
+            prevSquare = square; //if no pieces blocking than land in this square
+            square = square.leftUpDiag();  
+        }
+        return prevSquare;
     }
+
+    public static Position farthestRightUpDiag(ReturnPiece b, ArrayList<ReturnPiece> piecesOnBoard){
+        Position start = new Position(b.pieceRank, b.pieceFile);
+        Position prevSquare = null; //previous possible landing square
+        Position square = start.rightUpDiag();
+        while(square != null){
+            for(ReturnPiece p: piecesOnBoard){ 
+                if(square.sameSquare(p))
+                    return (!piecesOfSameSide(p, b) && !isKing(p))? square : prevSquare;
+            }
+            prevSquare = square; //if no pieces blocking than land in this square
+            square = square.rightUpDiag();  
+        }
+        return prevSquare;
+    }
+    public static Position farthestRightDownDiag(ReturnPiece b, ArrayList<ReturnPiece> piecesOnBoard){
+        Position start = new Position(b.pieceRank, b.pieceFile);
+        Position prevSquare = null; //previous possible landing square
+        Position square = start.rightDownDiag();
+        while(square != null){
+            for(ReturnPiece p: piecesOnBoard){ 
+                if(square.sameSquare(p))
+                    return (!piecesOfSameSide(p, b) && !isKing(p))? square : prevSquare;
+            }
+            prevSquare = square; //if no pieces blocking than land in this square
+            square = square.rightDownDiag();  
+        }
+        return prevSquare;
+    }
+
+    public static Position farthestLeftDownDiag(ReturnPiece b, ArrayList<ReturnPiece> piecesOnBoard){
+        Position start = new Position(b.pieceRank, b.pieceFile);
+        Position prevSquare = null; //previous possible landing square
+        Position square = start.leftDownDiag();
+        while(square != null){
+            for(ReturnPiece p: piecesOnBoard){ 
+                if(square.sameSquare(p))
+                    return (!piecesOfSameSide(p, b) && !isKing(p))? square : prevSquare;
+            }
+            prevSquare = square; //if no pieces blocking than land in this square
+            square = square.leftDownDiag();  
+        }
+        return prevSquare;
+    }
+
+
+    /** utility methods for ReturnPiece */
+    public static boolean piecesOfSameSide(ReturnPiece a, ReturnPiece b){
+        return a.pieceType.name().charAt(0) == b.pieceType.name().charAt(0);
+    }
+    public static boolean isKing(ReturnPiece p){
+        return p.pieceType == PieceType.BK || p.pieceType == PieceType.WK;
+    }
+    
 }
