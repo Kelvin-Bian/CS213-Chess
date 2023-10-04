@@ -1,7 +1,6 @@
 package chess;
 import java.util.ArrayList;
 
-import chess.ReturnPiece.PieceType;
 
 public class Bishop {
 
@@ -27,7 +26,7 @@ public class Bishop {
         while(square != null){
             for(ReturnPiece p: piecesOnBoard){ 
                 if(square.sameSquare(p))    //check if any pieces are in this left up diag square
-                    return (!piecesOfSameSide(p, b) && !isKing(p))? square : prevSquare;
+                    return (!PieceUtility.piecesOfSameSide(p, b) && !PieceUtility.isKing(p))? square : prevSquare;
             }
             prevSquare = square; //if no pieces blocking than land in this square
             square = square.leftUpDiag();  
@@ -42,7 +41,7 @@ public class Bishop {
         while(square != null){
             for(ReturnPiece p: piecesOnBoard){ 
                 if(square.sameSquare(p))
-                    return (!piecesOfSameSide(p, b) && !isKing(p))? square : prevSquare;
+                    return (!PieceUtility.piecesOfSameSide(p, b) && !PieceUtility.isKing(p))? square : prevSquare;
             }
             prevSquare = square; //if no pieces blocking than land in this square
             square = square.rightUpDiag();  
@@ -56,7 +55,7 @@ public class Bishop {
         while(square != null){
             for(ReturnPiece p: piecesOnBoard){ 
                 if(square.sameSquare(p))
-                    return (!piecesOfSameSide(p, b) && !isKing(p))? square : prevSquare;
+                    return (!PieceUtility.piecesOfSameSide(p, b) && !PieceUtility.isKing(p))? square : prevSquare;
             }
             prevSquare = square; //if no pieces blocking than land in this square
             square = square.rightDownDiag();  
@@ -71,7 +70,7 @@ public class Bishop {
         while(square != null){
             for(ReturnPiece p: piecesOnBoard){ 
                 if(square.sameSquare(p))
-                    return (!piecesOfSameSide(p, b) && !isKing(p))? square : prevSquare;
+                    return (!PieceUtility.piecesOfSameSide(p, b) && !PieceUtility.isKing(p))? square : prevSquare;
             }
             prevSquare = square; //if no pieces blocking than land in this square
             square = square.leftDownDiag();  
@@ -79,13 +78,4 @@ public class Bishop {
         return prevSquare;
     }
 
-
-    /** utility methods for ReturnPiece */
-    public static boolean piecesOfSameSide(ReturnPiece a, ReturnPiece b){
-        return a.pieceType.name().charAt(0) == b.pieceType.name().charAt(0);
-    }
-    public static boolean isKing(ReturnPiece p){
-        return p.pieceType == PieceType.BK || p.pieceType == PieceType.WK;
-    }
-    
 }
