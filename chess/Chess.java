@@ -1,6 +1,7 @@
 package chess;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 class ReturnPiece {
 	static enum PieceType {WP, WR, WN, WB, WQ, WK, BP, BR, BN, BB, BK, BQ};
@@ -37,6 +38,8 @@ public class Chess {
 	
 	enum Player { white, black }
 	
+	static HashMap<Position, ReturnPiece> board = new HashMap<>();
+
 	/**
 	 * Plays the next move for whichever player has the turn.
 	 * 
@@ -61,5 +64,6 @@ public class Chess {
 	 */
 	public static void start() {
 		/* FILL IN THIS METHOD */
+		
 	}
 }

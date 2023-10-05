@@ -18,6 +18,32 @@ public class Position {
     public PieceFile f(){
         return file;
     }
+
+    public static int rankDiff(ReturnPiece p, Position end){
+        //+ int means end position is above starting position
+        //- int means end is below position
+        return end.r() - p.pieceRank;
+    }
+    public static  Position oneSquareForward(ReturnPiece p){
+        //forward means toward opp side of board (ex: white to black's side)
+        //if white pawn, rank increases, square above     else rank decreases, square below
+        int r = (PieceUtility.isWhite(p))? p.pieceRank+1: p.pieceRank-1;
+        PieceFile f = p.pieceFile;
+        return new Position(r, f);
+    }
+    public static  Position oneSquareForward(Position p, boolean isWhite){
+        //forward means toward opp side of board (ex: white to black's side)
+        //if white pawn, rank increases, square above     else rank decreases, square below
+        int r = (isWhite)? p.r()+1: p.r()-1;
+        PieceFile f = p.f();
+        return new Position(r, f);
+    }
+    public static Position twoSqauresForward(ReturnPiece p){ //forward means toward opp side of board (ex: white to black's side)
+        //if black pawn, rank decreases     else rank increases
+        Position oneForward = oneSquareForward(p);
+        return oneSquareForward(oneForward, PieceUtility.isWhite(p));
+    }
+
     public static Position getPosition(ReturnPiece p){
         return new Position(p.pieceRank, p.pieceFile);
     }
@@ -60,10 +86,10 @@ public class Position {
         else return 2;
     }
 
-    public static boolean withinLine(ReturnPiece r, Position farthest, Position x){
+    public static boolean withinLine(ReturnPiece r, Position farthest, Position x){ //within horizontal/vertical line
         if(sameSquare(r, x)) return false; //not a valid move if did not move
-        if(farthest.sameSquare(x)) return true;
-        int startToXDir = whichCardinalDir(r, x);
+        if(farthest.sameSquare(x)) return true; //can move to farthest square possible
+        int startToXDir = whichCardinalDir(r, x); //if in btwn start and farthest, check to make sure within line from start to farthest
         int xToEndDir = whichCardinalDir(x, farthest);
         return startToXDir == xToEndDir;
     }

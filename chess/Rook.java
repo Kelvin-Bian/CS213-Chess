@@ -19,7 +19,7 @@ public class Rook {
         while(square != null){
             for(ReturnPiece p: piecesOnBoard){ 
                 if(square.sameSquare(p))    //check if any pieces are in this left up diag square
-                    return (!PieceUtility.piecesOfSameSide(p, r) && !PieceUtility.isKing(p))? square : prevSquare;
+                    return (!PieceUtility.sameSide(p, r) && !PieceUtility.isKing(p))? square : prevSquare;
             }
             prevSquare = square; //if no pieces blocking than land in this square
             square = Position.up(r); 
@@ -32,7 +32,7 @@ public class Rook {
         while(square != null){
             for(ReturnPiece p: piecesOnBoard){ 
                 if(square.sameSquare(p))    //check if any pieces are in this left up diag square
-                    return (!PieceUtility.piecesOfSameSide(p, r) && !PieceUtility.isKing(p))? square : prevSquare;
+                    return (!PieceUtility.sameSide(p, r) && !PieceUtility.isKing(p))? square : prevSquare;
             }
             prevSquare = square; //if no pieces blocking than land in this square
             square = Position.down(r); 
@@ -45,7 +45,7 @@ public class Rook {
         while(square != null){
             for(ReturnPiece p: piecesOnBoard){ 
                 if(square.sameSquare(p))    //check if any pieces are in this left up diag square
-                    return (!PieceUtility.piecesOfSameSide(p, r) && !PieceUtility.isKing(p))? square : prevSquare;
+                    return (!PieceUtility.sameSide(p, r) && !PieceUtility.isKing(p))? square : prevSquare;
             }
             prevSquare = square; //if no pieces blocking than land in this square
             square = Position.left(r); 
@@ -58,7 +58,7 @@ public class Rook {
         while(square != null){
             for(ReturnPiece p: piecesOnBoard){ 
                 if(square.sameSquare(p))    //check if any pieces are in this left up diag square
-                    return (!PieceUtility.piecesOfSameSide(p, r) && !PieceUtility.isKing(p))? square : prevSquare;
+                    return (!PieceUtility.sameSide(p, r) && !PieceUtility.isKing(p))? square : prevSquare;
             }
             prevSquare = square; //if no pieces blocking than land in this square
             square = Position.right(r); 
