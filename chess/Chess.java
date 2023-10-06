@@ -39,7 +39,7 @@ public class Chess {
 	enum Player { white, black }
 	
 	static HashMap<Position, ReturnPiece> board = new HashMap<>();
-
+	
 	/**
 	 * Plays the next move for whichever player has the turn.
 	 * 
@@ -64,6 +64,11 @@ public class Chess {
 	 */
 	public static void start() {
 		/* FILL IN THIS METHOD */
-		
+		PieceUtility.initialPieces();
+		ArrayList<ReturnPiece> pieces = new ArrayList<>();
+		for(ReturnPiece p: board.values()){
+			pieces.add(p);
+		}
+		PlayChess.printBoard(pieces);
 	}
 }
