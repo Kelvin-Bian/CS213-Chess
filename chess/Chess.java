@@ -64,7 +64,7 @@ public class Chess {
 	 */
 	public static void start() {
 		/* FILL IN THIS METHOD */
-		PieceUtility.initialPieces();
+		BoardUtility.makePieces();
 		ArrayList<ReturnPiece> pieces = new ArrayList<>();
 		for(ReturnPiece p: board.values()){
 			pieces.add(p);
