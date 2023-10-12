@@ -1,7 +1,6 @@
 package chess;
 import java.util.ArrayList;
 
-
 public class Bishop {
 
     public static boolean checkLegal(Position end, ReturnPiece b, ArrayList<ReturnPiece> piecesOnBoard){
