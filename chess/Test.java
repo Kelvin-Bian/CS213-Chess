@@ -2,7 +2,9 @@ package chess;
 
 public class Test {
     public static void main(String[] args){
-        // System.out.println(Move.trimBeginningWhiteSpace("   nu l    l    2 2"));
-        System.out.println(Move.charToFile('a'));
+        
+        // System.out.print(BoardUtility.trimWhiteSpace("     as is    p 3a    "));
+        // System.out.print(BoardUtility.trimWhiteSpace("     as is    p 3a    "));
+        System.out.println(BoardUtility.parseMove("h8 h8", false));
     }
 }

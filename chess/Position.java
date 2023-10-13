@@ -18,7 +18,9 @@ public class Position {
     public PieceFile f(){
         return file;
     }
-
+    public String toString(){
+        return ""+file+rank;
+    }
     public static int rankDiff(ReturnPiece p, Position end){
         //+ int means end position is above starting position
         //- int means end is below position

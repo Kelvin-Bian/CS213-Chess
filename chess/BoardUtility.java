@@ -3,18 +3,59 @@ import chess.ReturnPiece.PieceFile;
 import chess.ReturnPiece.PieceType;
 
 public class BoardUtility {
-	public static Move parseMove(String move){
-		
-        char c = move.charAt(0);
-        
-        PieceFile f = charToFile(move.charAt(0));
-        
+	public static Move parseMove(String move, boolean whiteTurn){
+		//return 5 variations of Move and null if string format not as expected
+		//resign	 p1 to p2		p1 to p2 draw?		p1 to p2 P		p1 to p2 P draw?
+		move = trimWhiteSpace(move);
+		int len = move.length();
+		if(len>=5){
+			if(move.equals("resign")) return new Move(true);
+			PieceFile f = charToFile(move.charAt(0));
+			PieceFile f2 = charToFile(move.charAt(3));
+			int r = move.charAt(1)-'0';
+			int r2 = move.charAt(4)-'0';
+			Position start = new Position(r, f);
+			Position end = new Position(r2, f2);
+			
+			if(len ==5) return new Move(start, end);
+			else if(len == 11 && move.substring(6).equals("draw?")){
+				return new Move(start, end, true);
+			}
+			else if(len== 7){
+				char ptype = move.charAt(6);
+				PieceType pt = charToPieceType(ptype, whiteTurn);
+				return new Move(start, end, pt);
+			}
+			else if(len == 13){
+				if(move.substring(8).equals("draw?")){
+					char ptype = move.charAt(6);
+					PieceType pt = charToPieceType(ptype, whiteTurn);
+					return new Move(start, end, pt, true);
+				}
+				else return null;
+			}
+		}
+		return null;
     }
-	public static String trimBeginningWhiteSpace(String move){
+	public static String trimWhiteSpace(String move){
         String trimmed = "";
-        boolean strStart = false;
-        char[] str = move.toCharArray();
-        for(char c: str){
+		int len = move.length();
+		int lastInd = len-1; //index of last letter/num in move, all whitespace after
+
+		for(int i = len-1; i>=0; i--){
+			char c = move.charAt(i);
+			if(c!=' '){
+                lastInd = i;
+				break;
+            }
+			else if (i == 0){
+				lastInd = 0;
+			}
+		}
+
+		boolean strStart = false;
+        for(int i = 0; i <= lastInd; i++){
+			char c = move.charAt(i);
             if(!strStart && c!=' '){
                 strStart = true;
                 trimmed+=c;
@@ -22,10 +63,27 @@ public class BoardUtility {
             else if(strStart)
                 trimmed +=c;
         }
+		
         return trimmed;
     }
+
+	public static PieceType charToPieceType(char c, boolean whiteTurn){
+		int pTypeInd = (whiteTurn)? 1:7; //1 - White rook, 7 - Black rook
+		PieceType[] pT = PieceType.values();
+		if(c =='R'){
+			return pT[pTypeInd];
+		}
+		else if(c=='N')
+			return pT[pTypeInd+1];
+		else if(c=='B')
+			return pT[pTypeInd+2];
+		else if(c=='Q'){
+			return (whiteTurn)? pT[pTypeInd+3]: pT[11];
+		}
+		else return null;
+	}
 	public static PieceFile charToFile(char c){
-        return PieceFile.values()[c-'a'];
+        return (c>='a' && c<='h')? PieceFile.values()[c-'a']: null;
     }
     public static void makePieces(){
 		//add white pawns
