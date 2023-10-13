@@ -13,22 +13,11 @@ public class Knight {
         PieceFile endFile = end.f();
         int startRank = n.pieceRank;
         int endRank = end.r();
-        ReturnPiece piece = null;
-        // loop may not be necessary for current implementation because ReturnPiece n is provided
-        // (this method originally took starting square instead of a ReturnPiece as arguments)
+        // Check if own side piece is on target square or if move is to stay in place (illegal)
         for (ReturnPiece cur : piecesOnBoard) {
-            if(startFile == cur.pieceFile && startRank == cur.pieceRank) {
-                piece = cur;
-                break;
+            if(Position.sameSquare(cur, end) && PieceUtility.sameSide(n, cur)) {
+                return false;
             }
-        }
-        if (piece != null) {
-            return false;
-        }
-
-        // Check if own piece is on target square
-        for (ReturnPiece current : piecesOnBoard) {
-            if (Position.sameSquare(current, end) && PieceUtility.sameSide(current, n)) {return false;} 
         }
 
         // Check to see if target square follows Knight movement pattern
