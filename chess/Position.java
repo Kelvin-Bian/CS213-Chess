@@ -54,7 +54,7 @@ public class Position {
         //1,2,3,4 correspond to left up, right up, right down, left down diagonal
         int rankDiff = p.r() - base.r();
         int fileDiff = p.f().ordinal() - base.f().ordinal();
-        if(rankDiff != fileDiff)    return -1;
+        if(rankDiff != fileDiff) return -1;
         if(rankDiff > 0 && fileDiff <0) return 1;
         else if(rankDiff > 0 && fileDiff > 0 ) return 2;
         else if(rankDiff < 0 && fileDiff > 0) return 3;
