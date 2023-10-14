@@ -2,7 +2,7 @@ package chess;
 
 import java.util.ArrayList;
 
-public class Rook implements Piece{
+public class Rook{
     public static boolean checkLegal(Position end, ReturnPiece r, ArrayList<ReturnPiece> piecesOnBoard){
         if(Position.sameSquare(r, end)) return false;
         int cardinalDir = Position.whichCardinalDir(r, end);
@@ -18,10 +18,10 @@ public class Rook implements Piece{
         Position square = Position.up(r);
         while(square != null){
             for(ReturnPiece p: piecesOnBoard){ 
-                if(square.sameSquare(p))    //check if any pieces are in this left up diag square
+                if(square.sameSquare(p))    //check if any piece is in this square
                     return (!PieceUtility.sameSide(p, r) && !PieceUtility.isKing(p))? square : prevSquare;
             }
-            prevSquare = square; //if no pieces blocking than land in this square
+            prevSquare = square; //if no pieces blocking then land in this square
             square = Position.up(r); 
         }
         return prevSquare;
@@ -31,7 +31,7 @@ public class Rook implements Piece{
         Position square = Position.down(r);
         while(square != null){
             for(ReturnPiece p: piecesOnBoard){ 
-                if(square.sameSquare(p))    //check if any pieces are in this left up diag square
+                if(square.sameSquare(p))    //check if any piece is in this square
                     return (!PieceUtility.sameSide(p, r) && !PieceUtility.isKing(p))? square : prevSquare;
             }
             prevSquare = square; //if no pieces blocking than land in this square
@@ -44,7 +44,7 @@ public class Rook implements Piece{
         Position square = Position.left(r);
         while(square != null){
             for(ReturnPiece p: piecesOnBoard){ 
-                if(square.sameSquare(p))    //check if any pieces are in this left up diag square
+                if(square.sameSquare(p))    
                     return (!PieceUtility.sameSide(p, r) && !PieceUtility.isKing(p))? square : prevSquare;
             }
             prevSquare = square; //if no pieces blocking than land in this square
@@ -57,7 +57,7 @@ public class Rook implements Piece{
         Position square = Position.right(r);
         while(square != null){
             for(ReturnPiece p: piecesOnBoard){ 
-                if(square.sameSquare(p))    //check if any pieces are in this left up diag square
+                if(square.sameSquare(p))   
                     return (!PieceUtility.sameSide(p, r) && !PieceUtility.isKing(p))? square : prevSquare;
             }
             prevSquare = square; //if no pieces blocking than land in this square

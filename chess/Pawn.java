@@ -2,7 +2,7 @@ package chess;
 
 import java.util.ArrayList;
 
-public class Pawn implements Piece{ //move forward one square or two if first move
+public class Pawn{ //move forward one square or two if first move
 
     public static boolean checkLegal(Position end, ReturnPiece p, ArrayList<ReturnPiece> piecesOnBoard){
         if(firstMove(p)){

@@ -30,5 +30,10 @@ public class PieceUtility {
         p.pieceRank = r;
         p.pieceType = t;
     }
-    
+    public static void movePiece(ReturnPiece p, Position end){
+        PieceFile f = end.f();
+        int r = end.r();
+        p.pieceFile = f;
+        p.pieceRank = r;
+    }
 }

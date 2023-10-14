@@ -39,8 +39,10 @@ public class Chess {
 	enum Player { white, black }
 	
 	static HashMap<Position, ReturnPiece> board = new HashMap<>();
-	static ArrayList<Piece> pieces = new ArrayList<>();
-
+	static ArrayList<ReturnPiece> pieces;
+	static boolean whiteCheck;
+	static boolean blackCheck;
+	static boolean whiteTurn;
 
 	/**
 	 * Plays the next move for whichever player has the turn.
@@ -54,10 +56,10 @@ public class Chess {
 	public static ReturnPlay play(String move) {
 
 		/* FILL IN THIS METHOD */
-		
-		/* FOLLOWING LINE IS A PLACEHOLDER TO MAKE COMPILER HAPPY */
-		/* WHEN YOU FILL IN THIS METHOD, YOU NEED TO RETURN A ReturnPlay OBJECT */
-		return null;
+		Move m = new Move(move, whiteTurn);
+		ReturnPlay r = m.returnPlay();
+		whiteTurn = !whiteTurn;
+		return r;
 	}
 	
 	
@@ -67,10 +69,11 @@ public class Chess {
 	public static void start() {
 		/* FILL IN THIS METHOD */
 		BoardUtility.makePieces();  //adds all pieces to board (hashmap)
-		ArrayList<ReturnPiece> pieces = new ArrayList<>();
+		pieces = new ArrayList<>();
 		for(ReturnPiece p: board.values()){
 			pieces.add(p);
 		}
+		whiteTurn = true;
 		PlayChess.printBoard(pieces);
 	}
 }

@@ -1,7 +1,7 @@
 package chess;
 import java.util.ArrayList;
 
-public class Bishop implements Piece{
+public class Bishop{
 
     public static boolean checkLegal(Position end, ReturnPiece b, ArrayList<ReturnPiece> piecesOnBoard){
         Position start = Position.getPosition(b);
@@ -24,7 +24,7 @@ public class Bishop implements Piece{
         Position square = start.leftUpDiag();
         while(square != null){
             for(ReturnPiece p: piecesOnBoard){ 
-                if(square.sameSquare(p))    //check if any pieces are in this left up diag square
+                if(square.sameSquare(p))    //check if any piece is in this left up diag square
                     return (!PieceUtility.sameSide(p, b) && !PieceUtility.isKing(p))? square : prevSquare;
             }
             prevSquare = square; //if no pieces blocking than land in this square
