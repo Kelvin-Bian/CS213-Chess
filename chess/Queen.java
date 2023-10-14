@@ -2,7 +2,7 @@ package chess;
 
 import java.util.ArrayList;
 
-public class Queen {
+public class Queen implements Piece {
     
     public static boolean checkLegal(Position end, ReturnPiece b, ArrayList<ReturnPiece> piecesOnBoard){
         Position start = Position.getPosition(b);

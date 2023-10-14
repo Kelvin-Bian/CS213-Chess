@@ -2,7 +2,7 @@ package chess;
 
 import java.util.ArrayList;
 
-public class Rook {
+public class Rook implements Piece{
     public static boolean checkLegal(Position end, ReturnPiece r, ArrayList<ReturnPiece> piecesOnBoard){
         if(Position.sameSquare(r, end)) return false;
         int cardinalDir = Position.whichCardinalDir(r, end);

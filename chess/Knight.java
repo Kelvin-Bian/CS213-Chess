@@ -5,7 +5,7 @@ import java.lang.Math;
 
 import chess.ReturnPiece.PieceFile;
 
-public class Knight {
+public class Knight implements Piece {
 
     // return boolean signifying whether a Knight move is legal or not
     public static boolean checkLegal (Position end, ReturnPiece n, ArrayList<ReturnPiece> piecesOnBoard) {

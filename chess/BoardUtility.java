@@ -9,7 +9,7 @@ public class BoardUtility {
 		move = trimWhiteSpace(move);
 		int len = move.length();
 		if(len>=5){
-			if(move.equals("resign")) return new Move(true);
+			if(move.equals("resign")) return new Move(true, whiteTurn);
 			PieceFile f = charToFile(move.charAt(0));
 			PieceFile f2 = charToFile(move.charAt(3));
 			int r = move.charAt(1)-'0';
@@ -17,20 +17,20 @@ public class BoardUtility {
 			Position start = new Position(r, f);
 			Position end = new Position(r2, f2);
 			
-			if(len ==5) return new Move(start, end);
+			if(len ==5) return new Move(start, end, whiteTurn);
 			else if(len == 11 && move.substring(6).equals("draw?")){
-				return new Move(start, end, true);
+				return new Move(start, end, true, whiteTurn);
 			}
 			else if(len== 7){
 				char ptype = move.charAt(6);
 				PieceType pt = charToPieceType(ptype, whiteTurn);
-				return new Move(start, end, pt);
+				return new Move(start, end, pt, whiteTurn);
 			}
 			else if(len == 13){
 				if(move.substring(8).equals("draw?")){
 					char ptype = move.charAt(6);
 					PieceType pt = charToPieceType(ptype, whiteTurn);
-					return new Move(start, end, pt, true);
+					return new Move(start, end, pt, true, whiteTurn);
 				}
 				else return null;
 			}
@@ -93,6 +93,7 @@ public class BoardUtility {
 			ReturnPiece pawn = new ReturnPiece();
             PieceUtility.setPiece(pawn, f, 2, PieceType.WP);
 			Chess.board.put(p, pawn);
+			Chess.pieces.add(new Pawn());
 		}
 		//add other white pieces
 		ReturnPiece rook = new ReturnPiece();

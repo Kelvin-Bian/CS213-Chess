@@ -39,7 +39,9 @@ public class Chess {
 	enum Player { white, black }
 	
 	static HashMap<Position, ReturnPiece> board = new HashMap<>();
-	
+	static ArrayList<Piece> pieces = new ArrayList<>();
+
+
 	/**
 	 * Plays the next move for whichever player has the turn.
 	 * 
