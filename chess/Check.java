@@ -5,6 +5,9 @@ import java.util.ArrayList;
 import chess.ReturnPiece.PieceFile;
 
 public class Check {
+
+    public static boolean checkmateChecking = false;
+
     public static boolean whiteCheck (ArrayList<ReturnPiece> piecesOnBoard) {
         Position whiteKingPosition = null;
 
@@ -49,6 +52,7 @@ public class Check {
     public static boolean blackCheckmate (ArrayList<ReturnPiece> piecesOnBoard) {
         // for each black piece on board, see if there is a legal move to stop the check
         boolean checkmate = true;
+        checkmateChecking = true;
         for (int i = 0; i < piecesOnBoard.size(); i++) {
             ReturnPiece cur = piecesOnBoard.get(i);
             Position start = Position.getPosition(cur);
@@ -67,6 +71,7 @@ public class Check {
                 }
             }
         }
+        checkmateChecking = false;
         return checkmate;
     }
 
@@ -75,6 +80,7 @@ public class Check {
     public static boolean whiteCheckmate (ArrayList<ReturnPiece> piecesOnBoard) {
         // for each white piece on board, see if there is a legal move to stop the check
         boolean checkmate = true;
+        checkmateChecking = true;
         for (int i = 0; i < piecesOnBoard.size(); i++) {
             ReturnPiece cur = piecesOnBoard.get(i);
             Position start = Position.getPosition(cur);
@@ -93,6 +99,7 @@ public class Check {
                 }
             }
         }
+        checkmateChecking = false;
         return checkmate;
     }
 }

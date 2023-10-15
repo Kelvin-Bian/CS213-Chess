@@ -33,9 +33,11 @@ public class King {
                     PieceUtility.movePiece(n, Position.right(n));
                     if (!Check.whiteCheck(piecesOnBoard)) {
                         PieceUtility.movePiece(n, startPosition);
-                        PieceUtility.movePiece(PieceUtility.findPiece(new Position(1, PieceFile.h), piecesOnBoard), new Position(1, PieceFile.f));
-                        Chess.whiteKingsideCastlePossible = false;
-                        Chess.whiteQueensideCastlePossible = false;
+                        if (!Check.checkmateChecking) {
+                            PieceUtility.movePiece(PieceUtility.findPiece(new Position(1, PieceFile.h), piecesOnBoard), new Position(1, PieceFile.f));
+                            Chess.whiteKingsideCastlePossible = false;
+                            Chess.whiteQueensideCastlePossible = false;
+                        }
                         return true;
                     }
                 }
@@ -51,9 +53,11 @@ public class King {
                     PieceUtility.movePiece(n, Position.left(n));
                     if (PieceUtility.findPiece(Position.left(n), piecesOnBoard) == null && !Check.whiteCheck(piecesOnBoard)) {
                         PieceUtility.movePiece(n, startPosition);
-                        PieceUtility.movePiece(PieceUtility.findPiece(new Position(1, PieceFile.a), piecesOnBoard), new Position(1, PieceFile.d));
-                        Chess.whiteKingsideCastlePossible = false;
-                        Chess.whiteQueensideCastlePossible = false;
+                        if (!Check.checkmateChecking) {
+                            PieceUtility.movePiece(PieceUtility.findPiece(new Position(1, PieceFile.a), piecesOnBoard), new Position(1, PieceFile.d));
+                            Chess.whiteKingsideCastlePossible = false;
+                            Chess.whiteQueensideCastlePossible = false;        
+                        }
                         return true;
                     }
                 }
@@ -71,9 +75,11 @@ public class King {
                     PieceUtility.movePiece(n, Position.right(n));
                     if (!Check.blackCheck(piecesOnBoard)) {
                         PieceUtility.movePiece(n, startPosition);
-                        PieceUtility.movePiece(PieceUtility.findPiece(new Position(8, PieceFile.h), piecesOnBoard), new Position(8, PieceFile.f));
-                        Chess.blackKingsideCastlePossible = false;
-                        Chess.blackQueensideCastlePossible = false;
+                        if (!Check.checkmateChecking) {
+                            PieceUtility.movePiece(PieceUtility.findPiece(new Position(8, PieceFile.h), piecesOnBoard), new Position(8, PieceFile.f));
+                            Chess.blackKingsideCastlePossible = false;
+                            Chess.blackQueensideCastlePossible = false;
+                        }
                         return true;
                     }
                 }
@@ -89,9 +95,11 @@ public class King {
                     PieceUtility.movePiece(n, Position.left(n));
                     if (PieceUtility.findPiece(Position.left(n), piecesOnBoard) == null && !Check.blackCheck(piecesOnBoard)) {
                         PieceUtility.movePiece(n, startPosition);
-                        PieceUtility.movePiece(PieceUtility.findPiece(new Position(8, PieceFile.a), piecesOnBoard), new Position(8, PieceFile.d));
-                        Chess.blackKingsideCastlePossible = false;
-                        Chess.blackQueensideCastlePossible = false;
+                        if (!Check.checkmateChecking) {
+                            PieceUtility.movePiece(PieceUtility.findPiece(new Position(8, PieceFile.a), piecesOnBoard), new Position(8, PieceFile.d));
+                            Chess.blackKingsideCastlePossible = false;
+                            Chess.blackQueensideCastlePossible = false;
+                        }
                         return true;
                     }
                 }
