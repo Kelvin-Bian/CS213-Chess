@@ -122,11 +122,12 @@ public class Move {
     }
 
     public void playMove(ArrayList<ReturnPiece> pieces){
-        PieceUtility.movePiece(movePiece, end); //update rank and file in returnpiece
         captured = PieceUtility.findPiece(end, pieces);
         if(captured!= null){ //if capturing, remove piece
             pieces.remove(captured);
         }
+        PieceUtility.movePiece(movePiece, end); //update rank and file in returnpiece
+        
     }
 
     public void reverseMove(ArrayList<ReturnPiece> pieces){

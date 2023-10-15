@@ -63,7 +63,7 @@ public class Position {
         //1,2,3,4 correspond to left up, right up, right down, left down diagonal
         int rankDiff = p.r() - base.r();
         int fileDiff = p.f().ordinal() - base.f().ordinal();
-        if(rankDiff != fileDiff) return -1;
+        if(Math.abs(rankDiff) != Math.abs(fileDiff)) return -1;
         if(rankDiff > 0 && fileDiff <0) return 1;
         else if(rankDiff > 0 && fileDiff > 0 ) return 2;
         else if(rankDiff < 0 && fileDiff > 0) return 3;
@@ -156,5 +156,23 @@ public class Position {
     }
     public boolean sameSquare(Position x){
         return file == x.f() && rank == x.r();
+    }
+    public  Position up(){ //no squares above if rank 8
+        if(rank == 8) return null;
+        return new Position(rank+1, file);
+    }
+    public  Position down(){ //no squares below if rank 1
+        if(rank == 1) return null;
+        return new Position(rank-1, file);
+    }
+    public  Position left(){ //no squares to left if file a
+
+        if(file == PieceFile.a) return null;
+        return new Position(rank, PieceFile.values()[file.ordinal()-1]);
+    }
+    public  Position right(){ //no squares to right if file h
+
+        if(file == PieceFile.h) return null;
+        return new Position(rank, PieceFile.values()[file.ordinal()+1]);
     }
 }

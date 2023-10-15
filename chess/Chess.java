@@ -58,7 +58,7 @@ public class Chess {
 		/* FILL IN THIS METHOD */
 		Move m = new Move(move, whiteTurn);
 		ReturnPlay r = m.returnPlay(whiteCheck, blackCheck, pieces);
-		System.out.println(whiteTurn);
+
 		return r;
 	}
 	

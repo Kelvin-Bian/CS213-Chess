@@ -22,7 +22,7 @@ public class Rook{
                     return (!PieceUtility.sameSide(p, r) && !PieceUtility.isKing(p))? square : prevSquare;
             }
             prevSquare = square; //if no pieces blocking then land in this square
-            square = Position.up(r); 
+            square = square.up(); 
         }
         return prevSquare;
     }
@@ -35,7 +35,7 @@ public class Rook{
                     return (!PieceUtility.sameSide(p, r) && !PieceUtility.isKing(p))? square : prevSquare;
             }
             prevSquare = square; //if no pieces blocking than land in this square
-            square = Position.down(r); 
+            square = square.down(); 
         }
         return prevSquare;
     }
@@ -48,7 +48,7 @@ public class Rook{
                     return (!PieceUtility.sameSide(p, r) && !PieceUtility.isKing(p))? square : prevSquare;
             }
             prevSquare = square; //if no pieces blocking than land in this square
-            square = Position.left(r); 
+            square = square.left(); 
         }
         return prevSquare;
     }
@@ -61,7 +61,7 @@ public class Rook{
                     return (!PieceUtility.sameSide(p, r) && !PieceUtility.isKing(p))? square : prevSquare;
             }
             prevSquare = square; //if no pieces blocking than land in this square
-            square = Position.right(r); 
+            square = square.right(); 
         }
         return prevSquare;
     }
