@@ -94,6 +94,10 @@ public class Move {
                 invalid = true; //does move follow piece rules?
                 return false;
             }
+            //is capture on king?
+            captured = PieceUtility.findPiece(end, pieces);
+            if(captured != null && PieceUtility.isKing(captured))
+                return false;
         }
         return true;
     }
@@ -126,8 +130,15 @@ public class Move {
         if(captured!= null){ //if capturing, remove piece
             pieces.remove(captured);
         }
+        if(PieceUtility.isPawn(movePiece) && Pawn.validEnPassant(end, movePiece, pieces)){
+            captured = Chess.prev.movePiece;
+            pieces.remove(captured);
+        }
         PieceUtility.movePiece(movePiece, end); //update rank and file in returnpiece
-        
+        //pawn promotion automatic/explicit
+        if(Pawn.canPromote(end, movePiece)){
+            PieceUtility.promotion(movePiece, promoType);
+        }
     }
 
     public void reverseMove(ArrayList<ReturnPiece> pieces){
@@ -150,20 +161,26 @@ public class Move {
                 reverseMove(pieces);
             }
             else{
+                if(promoType != null && !Pawn.canPromote(end, movePiece))
+                    r.message = Message.ILLEGAL_MOVE;
                 if(draw)
                     r.message = Message.DRAW;
                 else if((whiteTurn && Check.blackCheck(pieces))){
-                    r.message = Message.CHECK;
+                    r.message = (Check.blackCheckmate(pieces))? Message.CHECKMATE_WHITE_WINS: Message.CHECK;
                     Chess.blackCheck = true;
                 }
                 else if(!whiteTurn && Check.whiteCheck(pieces)){
-                    r.message = Message.CHECK;
+                    r.message = (Check.whiteCheckmate(pieces))? Message.CHECKMATE_BLACK_WINS: Message.CHECK;
                     Chess.whiteCheck = true;
                 }
-                else if(whiteTurn && Check.blackCheckmate(pieces))
-                    r.message = Message.CHECKMATE_WHITE_WINS;
-                else if(!whiteTurn && Check.whiteCheckmate(pieces))
-                    r.message = Message.CHECKMATE_BLACK_WINS;
+
+                //turn off en passant check for next move when curMove isn't pawn two forward
+                Chess.enPassantPossible = false;
+                    //if pawn moved two forward, en passant possible in next move
+                if(PieceUtility.isPawn(movePiece) && Math.abs(start.r()-end.r()) == 2){
+                    Chess.enPassantPossible = true;
+                    Chess.prev = this;
+                }
                 Chess.whiteTurn = !whiteTurn;
                 }
         }

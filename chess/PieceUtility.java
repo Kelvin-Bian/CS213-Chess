@@ -12,6 +12,9 @@ public class PieceUtility {
     public static boolean isKing(ReturnPiece p){
         return p.pieceType == PieceType.BK || p.pieceType == PieceType.WK;
     }
+    public static boolean isPawn(ReturnPiece p){
+        return p.pieceType == PieceType.BP || p.pieceType == PieceType.WP;
+    }
 
     public static boolean isWhite(ReturnPiece p){
         return p.pieceType.name().charAt(0)=='W';
@@ -46,5 +49,14 @@ public class PieceUtility {
             }
         }
         return null;
+    }
+
+    public static void promotion(ReturnPiece p, PieceType type){
+        if(type == null){
+            p.pieceType = (isWhite(p))? PieceType.WQ: PieceType.BQ;
+        }
+        else{
+            p.pieceType = type;
+        }
     }
 }

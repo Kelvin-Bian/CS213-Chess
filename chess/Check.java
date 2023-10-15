@@ -38,7 +38,7 @@ public class Check {
 
         // for each opposing piece on board, check if it can move into the black king's square (AKA put it under check)
         for (ReturnPiece cur : piecesOnBoard) {
-            if(!PieceUtility.isWhite(cur) && legalFunction.checkLegal(blackKingPosition, cur, piecesOnBoard)) {
+            if(PieceUtility.isWhite(cur) && legalFunction.checkLegal(blackKingPosition, cur, piecesOnBoard)) {
                 return true;
             }
         }
@@ -73,7 +73,7 @@ public class Check {
 
     //see if black won (checkmated the white king)
     public static boolean whiteCheckmate (ArrayList<ReturnPiece> piecesOnBoard) {
-        // for each black piece on board, see if there is a legal move to stop the check
+        // for each white piece on board, see if there is a legal move to stop the check
         boolean checkmate = true;
         for (int i = 0; i < piecesOnBoard.size(); i++) {
             ReturnPiece cur = piecesOnBoard.get(i);

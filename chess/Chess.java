@@ -43,7 +43,9 @@ public class Chess {
 	static boolean whiteCheck;
 	static boolean blackCheck;
 	static boolean whiteTurn;
-
+	static boolean enPassantPossible;
+	static Move prev;
+	
 	/**
 	 * Plays the next move for whichever player has the turn.
 	 * 

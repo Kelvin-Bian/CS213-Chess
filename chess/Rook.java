@@ -19,7 +19,7 @@ public class Rook{
         while(square != null){
             for(ReturnPiece p: piecesOnBoard){ 
                 if(square.sameSquare(p))    //check if any piece is in this square
-                    return (!PieceUtility.sameSide(p, r) && !PieceUtility.isKing(p))? square : prevSquare;
+                    return (!PieceUtility.sameSide(p, r) )? square : prevSquare;
             }
             prevSquare = square; //if no pieces blocking then land in this square
             square = square.up(); 
@@ -32,7 +32,7 @@ public class Rook{
         while(square != null){
             for(ReturnPiece p: piecesOnBoard){ 
                 if(square.sameSquare(p))    //check if any piece is in this square
-                    return (!PieceUtility.sameSide(p, r) && !PieceUtility.isKing(p))? square : prevSquare;
+                    return (!PieceUtility.sameSide(p, r) )? square : prevSquare;
             }
             prevSquare = square; //if no pieces blocking than land in this square
             square = square.down(); 
@@ -45,7 +45,7 @@ public class Rook{
         while(square != null){
             for(ReturnPiece p: piecesOnBoard){ 
                 if(square.sameSquare(p))    
-                    return (!PieceUtility.sameSide(p, r) && !PieceUtility.isKing(p))? square : prevSquare;
+                    return (!PieceUtility.sameSide(p, r) )? square : prevSquare;
             }
             prevSquare = square; //if no pieces blocking than land in this square
             square = square.left(); 
@@ -58,7 +58,7 @@ public class Rook{
         while(square != null){
             for(ReturnPiece p: piecesOnBoard){ 
                 if(square.sameSquare(p))   
-                    return (!PieceUtility.sameSide(p, r) && !PieceUtility.isKing(p))? square : prevSquare;
+                    return (!PieceUtility.sameSide(p, r) )? square : prevSquare;
             }
             prevSquare = square; //if no pieces blocking than land in this square
             square = square.right(); 

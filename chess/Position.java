@@ -96,7 +96,11 @@ public class Position {
         else if(fileDiff < 0) return 4;
         else return 2;
     }
-
+    public static Position squareBtwn(Position start, Position end){
+        int newR = (end.r() > start.r())? start.r()+1 : start.r() - 1;
+        PieceFile f = start.f();
+        return new Position(newR, f);
+    }
     public static boolean withinLine(ReturnPiece r, Position farthest, Position x){ //within horizontal/vertical line
         if(sameSquare(r, x)) return false; //not a valid move if did not move
         if(farthest.sameSquare(x)) return true; //can move to farthest square possible
@@ -133,7 +137,7 @@ public class Position {
     public Position rightUpDiag(){
         //squares in file h and rank 8 have no right up diag
         PieceFile f = (file != PieceFile.h)? PieceFile.values()[file.ordinal()+1]: null;
-        int r = (rank!=8)? rank-1: -1;
+        int r = (rank!=8)? rank+1: -1;
         return (f== null|| r==-1)? null : new Position(r, f);
     }
     public Position leftDownDiag(){
