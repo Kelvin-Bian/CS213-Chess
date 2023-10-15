@@ -44,6 +44,10 @@ public class Chess {
 	static boolean blackCheck;
 	static boolean whiteTurn;
 	static boolean enPassantPossible;
+	static boolean whiteKingsideCastlePossible;
+	static boolean blackKingsideCastlePossible;
+	static boolean whiteQueensideCastlePossible;
+	static boolean blackQueensideCastlePossible;
 	static Move prev;
 	
 	/**
@@ -70,6 +74,10 @@ public class Chess {
 	 */
 	public static void start() {
 		/* FILL IN THIS METHOD */
+		whiteKingsideCastlePossible = true;
+		blackKingsideCastlePossible = true;
+		whiteQueensideCastlePossible = true;
+		blackQueensideCastlePossible = true;
 		BoardUtility.makePieces(board);  //adds all pieces to board (hashmap)
 		pieces = new ArrayList<>();
 		for(ReturnPiece p: board.values()){
