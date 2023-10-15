@@ -3,6 +3,7 @@ package chess;
 import chess.ReturnPiece.PieceFile;
 import chess.ReturnPiece.PieceType;
 import chess.ReturnPlay.Message;
+import java.util.ArrayList;
 
 public class Move {
 
@@ -13,41 +14,45 @@ public class Move {
     boolean draw;
     boolean whiteTurn;
     boolean invalid;
+    ReturnPiece movePiece;
+    ReturnPiece captured;
 
     public Move(String move, boolean whiteTurn){
-        //return 5 variations of Move and null if string format not as expected
+        // 5 variations of Move, invalid = true if not one of the variations
 		//resign	 p1 to p2		p1 to p2 draw?		p1 to p2 P		p1 to p2 P draw?
 		move = trimWhiteSpace(move);
 		int len = move.length();
 		if(len>=5){
 			if(move.equals("resign"))   set(true, whiteTurn);
-			PieceFile f = charToFile(move.charAt(0));
-			PieceFile f2 = charToFile(move.charAt(3));
-			int r = move.charAt(1)-'0';
-			int r2 = move.charAt(4)-'0';
-            if(f== null || f2 == null || r > 8 || r2 > 8 || r < 1 || r2 <1 )
-                invalid = true;
-			Position start = new Position(r, f);
-			Position end = new Position(r2, f2);
-			
-			if(len ==5) set(start, end, whiteTurn);
-			else if(len == 11 && move.substring(6).equals("draw?")){
-				set(start, end, true, whiteTurn);
-			}
-			else if(len== 7){
-				char ptype = move.charAt(6);
-				PieceType pt = charToPieceType(ptype, whiteTurn);
-				set(start, end, pt, whiteTurn);
-			}
-			else if(len == 13){
-				if(move.substring(8).equals("draw?")){
-					char ptype = move.charAt(6);
-					PieceType pt = charToPieceType(ptype, whiteTurn);
-					set(start, end, pt, true, whiteTurn);
-				}
-			}
             else{
-                invalid = true;
+                PieceFile f = charToFile(move.charAt(0));
+                PieceFile f2 = charToFile(move.charAt(3));
+                int r = move.charAt(1)-'0';
+                int r2 = move.charAt(4)-'0';
+                if(f== null || f2 == null || r > 8 || r2 > 8 || r < 1 || r2 <1 )
+                    invalid = true;
+                Position start = new Position(r, f);
+                Position end = new Position(r2, f2);
+                
+                if(len ==5) set(start, end, whiteTurn);
+                else if(len == 11 && move.substring(6).equals("draw?")){
+                    set(start, end, true, whiteTurn);
+                }
+                else if(len== 7){
+                    char ptype = move.charAt(6);
+                    PieceType pt = charToPieceType(ptype, whiteTurn);
+                    set(start, end, pt, whiteTurn);
+                }
+                else if(len == 13){
+                    if(move.substring(8).equals("draw?")){
+                        char ptype = move.charAt(6);
+                        PieceType pt = charToPieceType(ptype, whiteTurn);
+                        set(start, end, pt, true, whiteTurn);
+                    }
+                }
+                else{
+                    invalid = true;
+                }
             }
 		}
         else 
@@ -74,59 +79,98 @@ public class Move {
     }
     public void set(boolean resign, boolean whiteTurn ){
         this.resign = resign;
+        this.whiteTurn = whiteTurn;
     }
 
-    public void validMove(boolean whiteCheck, boolean blackCheck){
-        ReturnPiece p = Chess.board.get(start);
-        if(!invalid){
-            if(!validPiece(p)) invalid = true; //is there a valid piece at starting position?
-            if(!legalFunction.checkLegal(end, p, Chess.pieces)) invalid = true; //does move follow piece rules?
-            if(whiteTurn && Check.whiteCheck(Chess.pieces)) invalid = true; //putting own side's king in check?
-            if(!whiteTurn && Check.blackCheck(Chess.pieces)) invalid = true; 
-            if(whiteTurn && whiteCheck && Check.whiteCheck(Chess.pieces)) invalid = true; //did not remove own side's king from check
-            if(!whiteTurn && blackCheck && Check.blackCheck(Chess.pieces)) invalid = true;
+    public boolean validPreMove(ArrayList<ReturnPiece> pieces){
+        movePiece = PieceUtility.findPiece(start, pieces);
+        if(invalid) return false;
+        else{
+            if(!validPiece(movePiece)) {
+                invalid = true; //is there a valid piece at starting position?
+                return false;
+            }
+            if(!legalFunction.checkLegal(end, movePiece, pieces)) {
+                invalid = true; //does move follow piece rules?
+                return false;
+            }
         }
+        return true;
     }
-    public void playMove(){
-        ReturnPiece movePiece = Chess.board.remove(start);
-        Chess.pieces.remove(movePiece);
-        PieceUtility.movePiece(movePiece, end); //update rank and file in returnpiece
-        if(Chess.board.get(end)!= null){ //if capturing, remove piece
-            ReturnPiece captured = Chess.board.remove(end);
-            Chess.pieces.remove(captured);
+
+    public boolean validPostMove(boolean whiteCheck, boolean blackCheck, ArrayList<ReturnPiece> pieces){
+        if((whiteTurn && Check.whiteCheck(pieces)) || (!whiteTurn && Check.blackCheck(pieces))){
+             invalid = true; //putting own side's king in check?
+            return false;
         }
-        Chess.board.put(end, movePiece);
-        Chess.pieces.add(movePiece);
-        if(Chess.blackCheck && !Check.blackCheck(Chess.pieces)){
+        if(whiteTurn && whiteCheck && Check.whiteCheck(pieces)) {
+            invalid = true; //did not remove own side's king from check
+            return false;
+        }
+        if(!whiteTurn && blackCheck && Check.blackCheck(pieces)){
+            invalid = true; //did not remove own side's king from check
+            return false;
+        }
+        //otherwise valid move; if was in check, now not in check
+        if(!whiteTurn && Chess.blackCheck && !Check.blackCheck(pieces)){
             Chess.blackCheck = false;
         }
-        if(Chess.whiteCheck && !Check.whiteCheck(Chess.pieces))
+        if(whiteTurn && Chess.whiteCheck && !Check.whiteCheck(pieces))
             Chess.whiteCheck = false;
+
+        return true;
     }
 
-    public ReturnPlay returnPlay(){
-        ReturnPlay r = new ReturnPlay();
-        if(invalid) 
-            r.message = Message.ILLEGAL_MOVE;
-        else{
-            //carry out move
-            playMove();
-            if(draw)
-                r.message = Message.DRAW;
-            else if((whiteTurn && Check.blackCheck(Chess.pieces))){
-                r.message = Message.CHECK;
-                Chess.blackCheck = true;
-            }
-            else if(!whiteTurn && Check.whiteCheck(Chess.pieces)){
-                r.message = Message.CHECK;
-                Chess.whiteCheck = true;
-            }
-            else if(whiteTurn && Check.blackCheckmate(Chess.pieces))
-                r.message = Message.CHECKMATE_WHITE_WINS;
-            else if(!whiteTurn && Check.whiteCheckmate(Chess.pieces))
-                r.message = Message.CHECKMATE_BLACK_WINS;
+    public void playMove(ArrayList<ReturnPiece> pieces){
+        PieceUtility.movePiece(movePiece, end); //update rank and file in returnpiece
+        captured = PieceUtility.findPiece(end, pieces);
+        if(captured!= null){ //if capturing, remove piece
+            pieces.remove(captured);
         }
-        r.piecesOnBoard = Chess.pieces;
+    }
+
+    public void reverseMove(ArrayList<ReturnPiece> pieces){
+        if(captured!= null){
+            pieces.add(captured);
+        }
+        PieceUtility.movePiece(movePiece, start);
+    }
+    public ReturnPlay returnPlay(boolean whiteCheck, boolean blackCheck, ArrayList<ReturnPiece> pieces){
+        ReturnPlay r = new ReturnPlay();
+        if(resign) {
+            r.message = (whiteTurn)? Message.RESIGN_BLACK_WINS: Message.RESIGN_WHITE_WINS;
+            r.piecesOnBoard = pieces;
+            return r;
+        }
+        if(validPreMove(pieces)){
+            playMove(pieces);
+            if(!validPostMove(whiteCheck, blackCheck, pieces)) {
+                r.message = Message.ILLEGAL_MOVE;
+                reverseMove(pieces);
+            }
+            else{
+                if(draw)
+                    r.message = Message.DRAW;
+                else if((whiteTurn && Check.blackCheck(pieces))){
+                    r.message = Message.CHECK;
+                    Chess.blackCheck = true;
+                }
+                else if(!whiteTurn && Check.whiteCheck(pieces)){
+                    r.message = Message.CHECK;
+                    Chess.whiteCheck = true;
+                }
+                else if(whiteTurn && Check.blackCheckmate(pieces))
+                    r.message = Message.CHECKMATE_WHITE_WINS;
+                else if(!whiteTurn && Check.whiteCheckmate(pieces))
+                    r.message = Message.CHECKMATE_BLACK_WINS;
+                Chess.whiteTurn = !whiteTurn;
+                }
+        }
+        else{
+            r.message = Message.ILLEGAL_MOVE;
+        }
+
+        r.piecesOnBoard = pieces;
         return r;
     }
 

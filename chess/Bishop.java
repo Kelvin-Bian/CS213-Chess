@@ -20,7 +20,7 @@ public class Bishop{
         /**if yes, if piece is opponent's and not king, then valid move: capturing, can't move beyond
     -- else can't land on that square and beyond **/
         Position start = Position.getPosition(b);
-        Position prevSquare = null; //previous possible landing square
+        Position prevSquare = start; //previous possible landing square
         Position square = start.leftUpDiag();
         while(square != null){
             for(ReturnPiece p: piecesOnBoard){ 
@@ -35,7 +35,7 @@ public class Bishop{
 
     public static Position farthestRightUpDiag(ReturnPiece b, ArrayList<ReturnPiece> piecesOnBoard){
         Position start = new Position(b.pieceRank, b.pieceFile);
-        Position prevSquare = null; //previous possible landing square
+        Position prevSquare = start; //previous possible landing square
         Position square = start.rightUpDiag();
         while(square != null){
             for(ReturnPiece p: piecesOnBoard){ 
@@ -49,7 +49,7 @@ public class Bishop{
     }
     public static Position farthestRightDownDiag(ReturnPiece b, ArrayList<ReturnPiece> piecesOnBoard){
         Position start = new Position(b.pieceRank, b.pieceFile);
-        Position prevSquare = null; //previous possible landing square
+        Position prevSquare = start; //previous possible landing square
         Position square = start.rightDownDiag();
         while(square != null){
             for(ReturnPiece p: piecesOnBoard){ 
@@ -64,7 +64,7 @@ public class Bishop{
 
     public static Position farthestLeftDownDiag(ReturnPiece b, ArrayList<ReturnPiece> piecesOnBoard){
         Position start = new Position(b.pieceRank, b.pieceFile);
-        Position prevSquare = null; //previous possible landing square
+        Position prevSquare = start; //previous possible landing square
         Position square = start.leftDownDiag();
         while(square != null){
             for(ReturnPiece p: piecesOnBoard){ 

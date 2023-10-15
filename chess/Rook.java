@@ -14,7 +14,7 @@ public class Rook{
     }
 
     public static Position farthestUp(ReturnPiece r, ArrayList<ReturnPiece> piecesOnBoard){
-        Position prevSquare = null;
+        Position prevSquare = Position.getPosition(r);
         Position square = Position.up(r);
         while(square != null){
             for(ReturnPiece p: piecesOnBoard){ 
@@ -27,7 +27,7 @@ public class Rook{
         return prevSquare;
     }
     public static Position farthestDown(ReturnPiece r, ArrayList<ReturnPiece> piecesOnBoard){
-        Position prevSquare = null;
+        Position prevSquare = Position.getPosition(r);
         Position square = Position.down(r);
         while(square != null){
             for(ReturnPiece p: piecesOnBoard){ 
@@ -40,7 +40,7 @@ public class Rook{
         return prevSquare;
     }
     public static Position farthestLeft(ReturnPiece r, ArrayList<ReturnPiece> piecesOnBoard){
-        Position prevSquare = null;
+        Position prevSquare = Position.getPosition(r);
         Position square = Position.left(r);
         while(square != null){
             for(ReturnPiece p: piecesOnBoard){ 
@@ -53,7 +53,7 @@ public class Rook{
         return prevSquare;
     }
     public static Position farthestRight(ReturnPiece r, ArrayList<ReturnPiece> piecesOnBoard){
-        Position prevSquare = null;
+        Position prevSquare = Position.getPosition(r);
         Position square = Position.right(r);
         while(square != null){
             for(ReturnPiece p: piecesOnBoard){ 

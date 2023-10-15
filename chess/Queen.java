@@ -26,11 +26,11 @@ public class Queen {
         /**if yes, if piece is opponent's and not king, then valid move: capturing, can't move beyond
     -- else can't land on that square and beyond **/
         Position start = Position.getPosition(b);
-        Position prevSquare = null; //previous possible landing square
+        Position prevSquare = start; //previous possible landing square
         Position square = start.leftUpDiag();
         while(square != null){
             for(ReturnPiece p: piecesOnBoard){ 
-                if(square.sameSquare(p))    //check if any pieces are in this left up diag square
+                if(square.sameSquare(p))    //check if any piece is in this left up diag square
                     return (!PieceUtility.sameSide(p, b) && !PieceUtility.isKing(p))? square : prevSquare;
             }
             prevSquare = square; //if no pieces blocking than land in this square
@@ -41,7 +41,7 @@ public class Queen {
 
     public static Position farthestRightUpDiag(ReturnPiece b, ArrayList<ReturnPiece> piecesOnBoard){
         Position start = new Position(b.pieceRank, b.pieceFile);
-        Position prevSquare = null; //previous possible landing square
+        Position prevSquare = start; //previous possible landing square
         Position square = start.rightUpDiag();
         while(square != null){
             for(ReturnPiece p: piecesOnBoard){ 
@@ -55,7 +55,7 @@ public class Queen {
     }
     public static Position farthestRightDownDiag(ReturnPiece b, ArrayList<ReturnPiece> piecesOnBoard){
         Position start = new Position(b.pieceRank, b.pieceFile);
-        Position prevSquare = null; //previous possible landing square
+        Position prevSquare = start; //previous possible landing square
         Position square = start.rightDownDiag();
         while(square != null){
             for(ReturnPiece p: piecesOnBoard){ 
@@ -70,7 +70,7 @@ public class Queen {
 
     public static Position farthestLeftDownDiag(ReturnPiece b, ArrayList<ReturnPiece> piecesOnBoard){
         Position start = new Position(b.pieceRank, b.pieceFile);
-        Position prevSquare = null; //previous possible landing square
+        Position prevSquare = start; //previous possible landing square
         Position square = start.leftDownDiag();
         while(square != null){
             for(ReturnPiece p: piecesOnBoard){ 
@@ -84,24 +84,24 @@ public class Queen {
     }
 
     public static Position farthestUp(ReturnPiece r, ArrayList<ReturnPiece> piecesOnBoard){
-        Position prevSquare = null;
+        Position prevSquare = Position.getPosition(r);
         Position square = Position.up(r);
         while(square != null){
             for(ReturnPiece p: piecesOnBoard){ 
-                if(square.sameSquare(p))    //check if any pieces are in this left up diag square
+                if(square.sameSquare(p))    //check if any piece is in this square
                     return (!PieceUtility.sameSide(p, r) && !PieceUtility.isKing(p))? square : prevSquare;
             }
-            prevSquare = square; //if no pieces blocking than land in this square
+            prevSquare = square; //if no pieces blocking then land in this square
             square = Position.up(r); 
         }
         return prevSquare;
     }
     public static Position farthestDown(ReturnPiece r, ArrayList<ReturnPiece> piecesOnBoard){
-        Position prevSquare = null;
+        Position prevSquare = Position.getPosition(r);
         Position square = Position.down(r);
         while(square != null){
             for(ReturnPiece p: piecesOnBoard){ 
-                if(square.sameSquare(p))    //check if any pieces are in this left up diag square
+                if(square.sameSquare(p))    //check if any piece is in this square
                     return (!PieceUtility.sameSide(p, r) && !PieceUtility.isKing(p))? square : prevSquare;
             }
             prevSquare = square; //if no pieces blocking than land in this square
@@ -110,11 +110,11 @@ public class Queen {
         return prevSquare;
     }
     public static Position farthestLeft(ReturnPiece r, ArrayList<ReturnPiece> piecesOnBoard){
-        Position prevSquare = null;
+        Position prevSquare = Position.getPosition(r);
         Position square = Position.left(r);
         while(square != null){
             for(ReturnPiece p: piecesOnBoard){ 
-                if(square.sameSquare(p))    //check if any pieces are in this left up diag square
+                if(square.sameSquare(p))    
                     return (!PieceUtility.sameSide(p, r) && !PieceUtility.isKing(p))? square : prevSquare;
             }
             prevSquare = square; //if no pieces blocking than land in this square
@@ -123,11 +123,11 @@ public class Queen {
         return prevSquare;
     }
     public static Position farthestRight(ReturnPiece r, ArrayList<ReturnPiece> piecesOnBoard){
-        Position prevSquare = null;
+        Position prevSquare = Position.getPosition(r);
         Position square = Position.right(r);
         while(square != null){
             for(ReturnPiece p: piecesOnBoard){ 
-                if(square.sameSquare(p))    //check if any pieces are in this left up diag square
+                if(square.sameSquare(p))   
                     return (!PieceUtility.sameSide(p, r) && !PieceUtility.isKing(p))? square : prevSquare;
             }
             prevSquare = square; //if no pieces blocking than land in this square

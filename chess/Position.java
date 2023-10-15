@@ -18,6 +18,15 @@ public class Position {
     public PieceFile f(){
         return file;
     }
+    public boolean equals(Object o){
+        if(o instanceof Position == false){
+            return false;
+        }
+        else{
+            Position p2 = (Position) o;
+            return p2.r()==rank && p2.f() == file;
+        }
+    }
     public String toString(){
         return ""+file+rank;
     }
@@ -67,7 +76,7 @@ public class Position {
         if(end.sameSquare(x)) return true;
         int startToXDir = whichDiag(start, x);
         int xToEndDir = whichDiag(x, end);
-        return startToXDir == xToEndDir;
+        return startToXDir != -1 && xToEndDir != -1 && startToXDir == xToEndDir;
     }
 
     public static int whichCardinalDir(ReturnPiece r, Position p){
@@ -93,7 +102,7 @@ public class Position {
         if(farthest.sameSquare(x)) return true; //can move to farthest square possible
         int startToXDir = whichCardinalDir(r, x); //if in btwn start and farthest, check to make sure within line from start to farthest
         int xToEndDir = whichCardinalDir(x, farthest);
-        return startToXDir == xToEndDir;
+        return startToXDir != -1 && xToEndDir != -1 && startToXDir == xToEndDir;
     }
     public static Position up(ReturnPiece p){ //no squares above if rank 8
         int r = p.pieceRank;

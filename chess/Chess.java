@@ -57,8 +57,8 @@ public class Chess {
 
 		/* FILL IN THIS METHOD */
 		Move m = new Move(move, whiteTurn);
-		ReturnPlay r = m.returnPlay();
-		whiteTurn = !whiteTurn;
+		ReturnPlay r = m.returnPlay(whiteCheck, blackCheck, pieces);
+		System.out.println(whiteTurn);
 		return r;
 	}
 	
@@ -68,7 +68,7 @@ public class Chess {
 	 */
 	public static void start() {
 		/* FILL IN THIS METHOD */
-		BoardUtility.makePieces();  //adds all pieces to board (hashmap)
+		BoardUtility.makePieces(board);  //adds all pieces to board (hashmap)
 		pieces = new ArrayList<>();
 		for(ReturnPiece p: board.values()){
 			pieces.add(p);

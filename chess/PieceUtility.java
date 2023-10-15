@@ -1,5 +1,7 @@
 package chess;
 
+import java.util.ArrayList;
+
 import chess.ReturnPiece.PieceFile;
 import chess.ReturnPiece.PieceType;
 
@@ -35,5 +37,14 @@ public class PieceUtility {
         int r = end.r();
         p.pieceFile = f;
         p.pieceRank = r;
+    }
+
+    public static ReturnPiece findPiece(Position p, ArrayList<ReturnPiece> pieces){
+        for(ReturnPiece piece: pieces){
+            if(Position.getPosition(piece).equals(p)){
+                return piece;
+            }
+        }
+        return null;
     }
 }

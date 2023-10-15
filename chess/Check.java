@@ -48,49 +48,51 @@ public class Check {
     //see if white won (checkmated the black king)
     public static boolean blackCheckmate (ArrayList<ReturnPiece> piecesOnBoard) {
         // for each black piece on board, see if there is a legal move to stop the check
+        boolean checkmate = true;
         for (int i = 0; i < piecesOnBoard.size(); i++) {
             ReturnPiece cur = piecesOnBoard.get(i);
+            Position start = Position.getPosition(cur);
             if(!PieceUtility.isWhite(cur)) {
                 for (int rank = 1; rank < 9; rank++) {
                     for (PieceFile file : PieceFile.values()) {
-                        if (legalFunction.checkLegal(new Position(rank, file), cur, piecesOnBoard)) {
-                            ArrayList<ReturnPiece> tempBoard = new ArrayList<>(piecesOnBoard);
-                            tempBoard.remove(i);
-                            ReturnPiece tempPiece = new ReturnPiece();
-                            tempPiece.pieceRank = rank;
-                            tempPiece.pieceFile = file;
-                            tempBoard.add(i, tempPiece);
-                            if (!blackCheck(tempBoard)) return false;
+                        Position test = new Position(rank, file);
+                        if (legalFunction.checkLegal(test, cur, piecesOnBoard)) {
+                            PieceUtility.movePiece(cur, test);
+                            if (!blackCheck(piecesOnBoard)){
+                                checkmate = false;
+                            }
+                            PieceUtility.movePiece(cur, start);
                         }
                     }
                 }
             }
         }
-        return true;
+        return checkmate;
     }
 
 
     //see if black won (checkmated the white king)
     public static boolean whiteCheckmate (ArrayList<ReturnPiece> piecesOnBoard) {
         // for each black piece on board, see if there is a legal move to stop the check
+        boolean checkmate = true;
         for (int i = 0; i < piecesOnBoard.size(); i++) {
             ReturnPiece cur = piecesOnBoard.get(i);
+            Position start = Position.getPosition(cur);
             if(PieceUtility.isWhite(cur)) {
                 for (int rank = 1; rank < 9; rank++) {
                     for (PieceFile file : PieceFile.values()) {
-                        if (legalFunction.checkLegal(new Position(rank, file), cur, piecesOnBoard)) {
-                            ArrayList<ReturnPiece> tempBoard = new ArrayList<>(piecesOnBoard);
-                            tempBoard.remove(i);
-                            ReturnPiece tempPiece = new ReturnPiece();
-                            tempPiece.pieceRank = rank;
-                            tempPiece.pieceFile = file;
-                            tempBoard.add(i, tempPiece);
-                            if (!whiteCheck(tempBoard)) return false;
+                        Position test = new Position(rank, file);
+                        if (legalFunction.checkLegal(test, cur, piecesOnBoard)) {
+                            PieceUtility.movePiece(cur, test);
+                            if (!whiteCheck(piecesOnBoard)){
+                                checkmate = false;
+                            }
+                            PieceUtility.movePiece(cur, start);
                         }
                     }
                 }
             }
         }
-        return true;
+        return checkmate;
     }
 }
