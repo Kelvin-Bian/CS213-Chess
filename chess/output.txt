@@ -7,6 +7,7 @@ bp bp bp bp bp bp bp bp 7
 wp wp wp wp wp wp wp wp 2
 wR wN wB wQ wK wB wN wR 1
  a  b  c  d  e  f  g  h
+1
 
 bR bN bB bQ bK bB bN bR 8
 bp bp bp bp bp bp bp bp 7
@@ -18,6 +19,7 @@ wp wp wp wp    wp wp wp 2
 wR wN wB wQ wK wB wN wR 1
  a  b  c  d  e  f  g  h
 
+2
 
 bR bN bB bQ bK bB bN bR 8
 bp bp bp bp ## bp bp bp 7
@@ -29,6 +31,21 @@ wp wp wp wp    wp wp wp 2
 wR wN wB wQ wK wB wN wR 1
  a  b  c  d  e  f  g  h
 
+3
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK bB bN bR 8
+bp bp bp bp ## bp bp bp 7
+   ##    ##    ##    ## 6
+##    ##    bp    ##    5
+   ##    ## wp ##    ## 4
+##    ##    ##    ##    3
+wp wp wp wp    wp wp wp 2
+wR wN wB wQ wK wB wN wR 1
+ a  b  c  d  e  f  g  h
+
+4
 
 DRAW
 
@@ -42,6 +59,7 @@ wp wp wp wp    wp wp wp 2
 wR wN wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+5
 
 bR bN bB bQ bK bB bN bR 8
 bp bp bp    ## bp bp bp 7
@@ -53,6 +71,7 @@ wp wp wp wp    wp wp wp 2
 wR wN wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+6
 
 DRAW
 
@@ -66,6 +85,7 @@ wp wp wp wp    wp wp wp 2
 wR wN wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+7
 
 bR bN bB bQ bK ## bN bR 8
 bp bp bp    ## bp bp bp 7
@@ -77,19 +97,7 @@ wp wp wp wp    wp wp wp 2
 wR wN wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
-
-ILLEGAL_MOVE
-
-bR bN bB bQ bK ## bN bR 8
-bp bp bp    ## bp bp bp 7
-   ##    ##    ##    ## 6
-##    ## wp bp    ##    5
-   bB    ##    ##    ## 4
-##    ##    ## wN ##    3
-wp wp wp wp    wp wp wp 2
-wR wN wB wQ wK wB ## wR 1
- a  b  c  d  e  f  g  h
-
+8
 
 ILLEGAL_MOVE
 
@@ -103,6 +111,21 @@ wp wp wp wp    wp wp wp 2
 wR wN wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+9
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ## bp bp bp 7
+   ##    ##    ##    ## 6
+##    ## wp bp    ##    5
+   bB    ##    ##    ## 4
+##    ##    ## wN ##    3
+wp wp wp wp    wp wp wp 2
+wR wN wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+10
 
 bR bN bB bQ bK ## bN bR 8
 bp bp bp    ## bp bp bp 7
@@ -114,6 +137,7 @@ wp wp wp wp    wp wp wp 2
 wR    wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+11
 
 bR bN bB bQ bK ## bN bR 8
 bp bp bp    ## bp bp    7
@@ -125,6 +149,7 @@ wp wp wp wp    wp wp wp 2
 wR    wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+12
 
 bR bN bB bQ bK ## bN bR 8
 bp bp bp    ## bp bp    7
@@ -136,6 +161,7 @@ wp wp wp wp    wp wp ## 2
 wR    wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+13
 
 ILLEGAL_MOVE
 
@@ -149,6 +175,7 @@ wp wp wp wp    wp wp ## 2
 wR    wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+14
 
 ILLEGAL_MOVE
 
@@ -162,6 +189,7 @@ wp wp wp wp    wp wp ## 2
 wR    wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+15
 
 ILLEGAL_MOVE
 
@@ -175,6 +203,7 @@ wp wp wp wp    wp wp ## 2
 wR    wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+16
 
 ILLEGAL_MOVE
 
@@ -188,6 +217,7 @@ wp wp wp wp    wp wp ## 2
 wR    wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+17
 
 ILLEGAL_MOVE
 
@@ -201,6 +231,7 @@ wp wp wp wp    wp wp ## 2
 wR    wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+18
 
 ILLEGAL_MOVE
 
@@ -214,6 +245,7 @@ wp wp wp wp    wp wp ## 2
 wR    wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+19
 
 bR bN bB bQ bK ## bN bR 8
 bp bp bp    ##    bp    7
@@ -225,32 +257,7 @@ wp wp wp wp    wp wp ## 2
 wR    wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
-
-ILLEGAL_MOVE
-
-bR bN bB bQ bK ## bN bR 8
-bp bp bp    ##    bp    7
-   ##    ##    ##    ## 6
-##    ## wp bp bp ## bp 5
-   bB    ##    ##    wp 4
-##    wN    ## wN ##    3
-wp wp wp wp    wp wp ## 2
-wR    wB wQ wK wB ## wR 1
- a  b  c  d  e  f  g  h
-
-
-ILLEGAL_MOVE
-
-bR bN bB bQ bK ## bN bR 8
-bp bp bp    ##    bp    7
-   ##    ##    ##    ## 6
-##    ## wp bp bp ## bp 5
-   bB    ##    ##    wp 4
-##    wN    ## wN ##    3
-wp wp wp wp    wp wp ## 2
-wR    wB wQ wK wB ## wR 1
- a  b  c  d  e  f  g  h
-
+20
 
 ILLEGAL_MOVE
 
@@ -264,6 +271,7 @@ wp wp wp wp    wp wp ## 2
 wR    wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+21
 
 ILLEGAL_MOVE
 
@@ -277,6 +285,35 @@ wp wp wp wp    wp wp ## 2
 wR    wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+22
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+##    ## wp bp bp ## bp 5
+   bB    ##    ##    wp 4
+##    wN    ## wN ##    3
+wp wp wp wp    wp wp ## 2
+wR    wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+23
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+##    ## wp bp bp ## bp 5
+   bB    ##    ##    wp 4
+##    wN    ## wN ##    3
+wp wp wp wp    wp wp ## 2
+wR    wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+24
 
 bR bN bB bQ bK ## bN bR 8
 bp bp bp    ##    bp    7
@@ -288,6 +325,7 @@ wp wp wp wp    wp wp ## 2
 wR    wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+25
 
 ILLEGAL_MOVE
 
@@ -301,6 +339,7 @@ wp wp wp wp    wp wp ## 2
 wR    wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+26
 
 ILLEGAL_MOVE
 
@@ -314,6 +353,7 @@ wp wp wp wp    wp wp ## 2
 wR    wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+27
 
 ILLEGAL_MOVE
 
@@ -327,6 +367,7 @@ wp wp wp wp    wp wp ## 2
 wR    wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+28
 
 ILLEGAL_MOVE
 
@@ -340,6 +381,7 @@ wp wp wp wp    wp wp ## 2
 wR    wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+29
 
 ILLEGAL_MOVE
 
@@ -353,6 +395,7 @@ wp wp wp wp    wp wp ## 2
 wR    wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+30
 
 ILLEGAL_MOVE
 
@@ -366,6 +409,7 @@ wp wp wp wp    wp wp ## 2
 wR    wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+31
 
 bR bN bB bQ bK ## bN bR 8
 bp bp bp    ##    bp    7
@@ -377,6 +421,7 @@ wp wp wp wp    wp wp ## 2
 wR    wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+32
 
 bR bN bB bQ bK ## bN bR 8
 bp bp bp    ##    bp    7
@@ -388,6 +433,7 @@ wp wp wp wp    wp wp ## 2
 ## wR wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+33
 
 CHECK
 
@@ -401,6 +447,7 @@ wp wp wp bB    wp wp ## 2
 ## wR wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+34
 
 ILLEGAL_MOVE
 
@@ -414,6 +461,7 @@ wp wp wp bB    wp wp ## 2
 ## wR wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+35
 
 ILLEGAL_MOVE
 
@@ -427,6 +475,7 @@ wp wp wp bB    wp wp ## 2
 ## wR wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+36
 
 ILLEGAL_MOVE
 
@@ -440,6 +489,7 @@ wp wp wp bB    wp wp ## 2
 ## wR wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+37
 
 ILLEGAL_MOVE
 
@@ -453,6 +503,7 @@ wp wp wp bB    wp wp ## 2
 ## wR wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+38
 
 ILLEGAL_MOVE
 
@@ -466,6 +517,7 @@ wp wp wp bB    wp wp ## 2
 ## wR wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+39
 
 ILLEGAL_MOVE
 
@@ -479,6 +531,7 @@ wp wp wp bB    wp wp ## 2
 ## wR wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+40
 
 ILLEGAL_MOVE
 
@@ -492,6 +545,7 @@ wp wp wp bB    wp wp ## 2
 ## wR wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+41
 
 ILLEGAL_MOVE
 
@@ -505,6 +559,7 @@ wp wp wp bB    wp wp ## 2
 ## wR wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+42
 
 ILLEGAL_MOVE
 
@@ -518,6 +573,7 @@ wp wp wp bB    wp wp ## 2
 ## wR wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+43
 
 ILLEGAL_MOVE
 
@@ -531,6 +587,7 @@ wp wp wp bB    wp wp ## 2
 ## wR wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+44
 
 ILLEGAL_MOVE
 
@@ -544,6 +601,7 @@ wp wp wp bB    wp wp ## 2
 ## wR wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+45
 
 ILLEGAL_MOVE
 
@@ -557,6 +615,7 @@ wp wp wp bB    wp wp ## 2
 ## wR wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+46
 
 ILLEGAL_MOVE
 
@@ -570,6 +629,7 @@ wp wp wp bB    wp wp ## 2
 ## wR wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+47
 
 ILLEGAL_MOVE
 
@@ -583,6 +643,7 @@ wp wp wp bB    wp wp ## 2
 ## wR wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+48
 
 ILLEGAL_MOVE
 
@@ -596,6 +657,7 @@ wp wp wp bB    wp wp ## 2
 ## wR wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+49
 
 ILLEGAL_MOVE
 
@@ -609,6 +671,7 @@ wp wp wp bB    wp wp ## 2
 ## wR wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+50
 
 ILLEGAL_MOVE
 
@@ -622,6 +685,7 @@ wp wp wp bB    wp wp ## 2
 ## wR wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+51
 
 ILLEGAL_MOVE
 
@@ -635,6 +699,7 @@ wp wp wp bB    wp wp ## 2
 ## wR wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+52
 
 ILLEGAL_MOVE
 
@@ -648,6 +713,7 @@ wp wp wp bB    wp wp ## 2
 ## wR wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+53
 
 ILLEGAL_MOVE
 
@@ -661,6 +727,7 @@ wp wp wp bB    wp wp ## 2
 ## wR wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+54
 
 ILLEGAL_MOVE
 
@@ -674,6 +741,7 @@ wp wp wp bB    wp wp ## 2
 ## wR wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+55
 
 ILLEGAL_MOVE
 
@@ -687,6 +755,7 @@ wp wp wp bB    wp wp ## 2
 ## wR wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+56
 
 ILLEGAL_MOVE
 
@@ -700,6 +769,7 @@ wp wp wp bB    wp wp ## 2
 ## wR wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+57
 
 ILLEGAL_MOVE
 
@@ -713,6 +783,7 @@ wp wp wp bB    wp wp ## 2
 ## wR wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+58
 
 ILLEGAL_MOVE
 
@@ -726,6 +797,7 @@ wp wp wp bB    wp wp ## 2
 ## wR wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+59
 
 ILLEGAL_MOVE
 
@@ -739,6 +811,7 @@ wp wp wp bB    wp wp ## 2
 ## wR wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+60
 
 ILLEGAL_MOVE
 
@@ -752,6 +825,7 @@ wp wp wp bB    wp wp ## 2
 ## wR wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+61
 
 ILLEGAL_MOVE
 
@@ -765,6 +839,7 @@ wp wp wp bB    wp wp ## 2
 ## wR wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+62
 
 ILLEGAL_MOVE
 
@@ -778,6 +853,7 @@ wp wp wp bB    wp wp ## 2
 ## wR wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+63
 
 ILLEGAL_MOVE
 
@@ -791,6 +867,7 @@ wp wp wp bB    wp wp ## 2
 ## wR wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+64
 
 ILLEGAL_MOVE
 
@@ -804,6 +881,7 @@ wp wp wp bB    wp wp ## 2
 ## wR wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+65
 
 ILLEGAL_MOVE
 
@@ -817,6 +895,7 @@ wp wp wp bB    wp wp ## 2
 ## wR wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+66
 
 ILLEGAL_MOVE
 
@@ -830,6 +909,7 @@ wp wp wp bB    wp wp ## 2
 ## wR wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+67
 
 ILLEGAL_MOVE
 
@@ -843,6 +923,7 @@ wp wp wp bB    wp wp ## 2
 ## wR wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+68
 
 ILLEGAL_MOVE
 
@@ -856,6 +937,7 @@ wp wp wp bB    wp wp ## 2
 ## wR wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+69
 
 ILLEGAL_MOVE
 
@@ -869,6 +951,7 @@ wp wp wp bB    wp wp ## 2
 ## wR wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+70
 
 ILLEGAL_MOVE
 
@@ -882,6 +965,7 @@ wp wp wp bB    wp wp ## 2
 ## wR wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+71
 
 ILLEGAL_MOVE
 
@@ -895,6 +979,7 @@ wp wp wp bB    wp wp ## 2
 ## wR wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+72
 
 ILLEGAL_MOVE
 
@@ -908,6 +993,7 @@ wp wp wp bB    wp wp ## 2
 ## wR wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+73
 
 ILLEGAL_MOVE
 
@@ -921,6 +1007,7 @@ wp wp wp bB    wp wp ## 2
 ## wR wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+74
 
 ILLEGAL_MOVE
 
@@ -934,6 +1021,7 @@ wp wp wp bB    wp wp ## 2
 ## wR wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+75
 
 ILLEGAL_MOVE
 
@@ -947,6 +1035,7 @@ wp wp wp bB    wp wp ## 2
 ## wR wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+76
 
 ILLEGAL_MOVE
 
@@ -960,6 +1049,7 @@ wp wp wp bB    wp wp ## 2
 ## wR wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+77
 
 ILLEGAL_MOVE
 
@@ -973,6 +1063,7 @@ wp wp wp bB    wp wp ## 2
 ## wR wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+78
 
 ILLEGAL_MOVE
 
@@ -986,6 +1077,7 @@ wp wp wp bB    wp wp ## 2
 ## wR wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+79
 
 ILLEGAL_MOVE
 
@@ -999,6 +1091,7 @@ wp wp wp bB    wp wp ## 2
 ## wR wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+80
 
 ILLEGAL_MOVE
 
@@ -1012,6 +1105,7 @@ wp wp wp bB    wp wp ## 2
 ## wR wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+81
 
 ILLEGAL_MOVE
 
@@ -1025,6 +1119,7 @@ wp wp wp bB    wp wp ## 2
 ## wR wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+82
 
 ILLEGAL_MOVE
 
@@ -1038,6 +1133,7 @@ wp wp wp bB    wp wp ## 2
 ## wR wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+83
 
 ILLEGAL_MOVE
 
@@ -1051,6 +1147,7 @@ wp wp wp bB    wp wp ## 2
 ## wR wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+84
 
 ILLEGAL_MOVE
 
@@ -1064,6 +1161,7 @@ wp wp wp bB    wp wp ## 2
 ## wR wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+85
 
 ILLEGAL_MOVE
 
@@ -1077,6 +1175,7 @@ wp wp wp bB    wp wp ## 2
 ## wR wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+86
 
 ILLEGAL_MOVE
 
@@ -1090,6 +1189,7 @@ wp wp wp bB    wp wp ## 2
 ## wR wB wQ wK wB ## wR 1
  a  b  c  d  e  f  g  h
 
+87
 
 RESIGN_BLACK_WINS
 
