@@ -1,12 +1,23 @@
 package chess;
-
+import java.io.FileWriter;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class PlayChess {
 
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
+	public static void main(String[] args) throws IOException {
+		// Scanner sc = new Scanner(System.in);
+
+		File input = new File("./chess/input.txt");
+		FileOutputStream output = new FileOutputStream("./chess/output.txt");
+		System.out.println(input.getCanonicalPath());
+		Scanner sc = new Scanner(input);
+		System.setOut(new PrintStream(output));
+
 		Chess.start();
 		
 		String line = sc.nextLine();

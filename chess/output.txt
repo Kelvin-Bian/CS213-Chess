@@ -1,0 +1,1105 @@
+bR bN bB bQ bK bB bN bR 8
+bp bp bp bp bp bp bp bp 7
+   ##    ##    ##    ## 6
+##    ##    ##    ##    5
+   ##    ##    ##    ## 4
+##    ##    ##    ##    3
+wp wp wp wp wp wp wp wp 2
+wR wN wB wQ wK wB wN wR 1
+ a  b  c  d  e  f  g  h
+
+bR bN bB bQ bK bB bN bR 8
+bp bp bp bp bp bp bp bp 7
+   ##    ##    ##    ## 6
+##    ##    ##    ##    5
+   ##    ## wp ##    ## 4
+##    ##    ##    ##    3
+wp wp wp wp    wp wp wp 2
+wR wN wB wQ wK wB wN wR 1
+ a  b  c  d  e  f  g  h
+
+
+bR bN bB bQ bK bB bN bR 8
+bp bp bp bp ## bp bp bp 7
+   ##    ##    ##    ## 6
+##    ##    bp    ##    5
+   ##    ## wp ##    ## 4
+##    ##    ##    ##    3
+wp wp wp wp    wp wp wp 2
+wR wN wB wQ wK wB wN wR 1
+ a  b  c  d  e  f  g  h
+
+
+DRAW
+
+bR bN bB bQ bK bB bN bR 8
+bp bp bp bp ## bp bp bp 7
+   ##    ##    ##    ## 6
+##    ##    bp    ##    5
+   ##    ## wp ##    ## 4
+##    ##    ## wN ##    3
+wp wp wp wp    wp wp wp 2
+wR wN wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+bR bN bB bQ bK bB bN bR 8
+bp bp bp    ## bp bp bp 7
+   ##    ##    ##    ## 6
+##    ## bp bp    ##    5
+   ##    ## wp ##    ## 4
+##    ##    ## wN ##    3
+wp wp wp wp    wp wp wp 2
+wR wN wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+DRAW
+
+bR bN bB bQ bK bB bN bR 8
+bp bp bp    ## bp bp bp 7
+   ##    ##    ##    ## 6
+##    ## wp bp    ##    5
+   ##    ##    ##    ## 4
+##    ##    ## wN ##    3
+wp wp wp wp    wp wp wp 2
+wR wN wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ## bp bp bp 7
+   ##    ##    ##    ## 6
+##    ## wp bp    ##    5
+   bB    ##    ##    ## 4
+##    ##    ## wN ##    3
+wp wp wp wp    wp wp wp 2
+wR wN wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ## bp bp bp 7
+   ##    ##    ##    ## 6
+##    ## wp bp    ##    5
+   bB    ##    ##    ## 4
+##    ##    ## wN ##    3
+wp wp wp wp    wp wp wp 2
+wR wN wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ## bp bp bp 7
+   ##    ##    ##    ## 6
+##    ## wp bp    ##    5
+   bB    ##    ##    ## 4
+##    ##    ## wN ##    3
+wp wp wp wp    wp wp wp 2
+wR wN wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ## bp bp bp 7
+   ##    ##    ##    ## 6
+##    ## wp bp    ##    5
+   bB    ##    ##    ## 4
+##    wN    ## wN ##    3
+wp wp wp wp    wp wp wp 2
+wR    wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ## bp bp    7
+   ##    ##    ##    ## 6
+##    ## wp bp    ## bp 5
+   bB    ##    ##    ## 4
+##    wN    ## wN ##    3
+wp wp wp wp    wp wp wp 2
+wR    wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ## bp bp    7
+   ##    ##    ##    ## 6
+##    ## wp bp    ## bp 5
+   bB    ##    ##    wp 4
+##    wN    ## wN ##    3
+wp wp wp wp    wp wp ## 2
+wR    wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ## bp bp    7
+   ##    ##    ##    ## 6
+##    ## wp bp    ## bp 5
+   bB    ##    ##    wp 4
+##    wN    ## wN ##    3
+wp wp wp wp    wp wp ## 2
+wR    wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ## bp bp    7
+   ##    ##    ##    ## 6
+##    ## wp bp    ## bp 5
+   bB    ##    ##    wp 4
+##    wN    ## wN ##    3
+wp wp wp wp    wp wp ## 2
+wR    wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ## bp bp    7
+   ##    ##    ##    ## 6
+##    ## wp bp    ## bp 5
+   bB    ##    ##    wp 4
+##    wN    ## wN ##    3
+wp wp wp wp    wp wp ## 2
+wR    wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ## bp bp    7
+   ##    ##    ##    ## 6
+##    ## wp bp    ## bp 5
+   bB    ##    ##    wp 4
+##    wN    ## wN ##    3
+wp wp wp wp    wp wp ## 2
+wR    wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ## bp bp    7
+   ##    ##    ##    ## 6
+##    ## wp bp    ## bp 5
+   bB    ##    ##    wp 4
+##    wN    ## wN ##    3
+wp wp wp wp    wp wp ## 2
+wR    wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ## bp bp    7
+   ##    ##    ##    ## 6
+##    ## wp bp    ## bp 5
+   bB    ##    ##    wp 4
+##    wN    ## wN ##    3
+wp wp wp wp    wp wp ## 2
+wR    wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+##    ## wp bp bp ## bp 5
+   bB    ##    ##    wp 4
+##    wN    ## wN ##    3
+wp wp wp wp    wp wp ## 2
+wR    wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+##    ## wp bp bp ## bp 5
+   bB    ##    ##    wp 4
+##    wN    ## wN ##    3
+wp wp wp wp    wp wp ## 2
+wR    wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+##    ## wp bp bp ## bp 5
+   bB    ##    ##    wp 4
+##    wN    ## wN ##    3
+wp wp wp wp    wp wp ## 2
+wR    wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+##    ## wp bp bp ## bp 5
+   bB    ##    ##    wp 4
+##    wN    ## wN ##    3
+wp wp wp wp    wp wp ## 2
+wR    wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+##    ## wp bp bp ## bp 5
+   bB    ##    ##    wp 4
+##    wN    ## wN ##    3
+wp wp wp wp    wp wp ## 2
+wR    wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   bB    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp wp    wp wp ## 2
+wR    wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   bB    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp wp    wp wp ## 2
+wR    wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   bB    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp wp    wp wp ## 2
+wR    wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   bB    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp wp    wp wp ## 2
+wR    wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   bB    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp wp    wp wp ## 2
+wR    wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   bB    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp wp    wp wp ## 2
+wR    wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   bB    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp wp    wp wp ## 2
+wR    wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   ##    ##    ##    wp 4
+##    bB    ## wN ##    3
+wp wp wp wp    wp wp ## 2
+wR    wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   ##    ##    ##    wp 4
+##    bB    ## wN ##    3
+wp wp wp wp    wp wp ## 2
+## wR wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+CHECK
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   ##    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp bB    wp wp ## 2
+## wR wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   ##    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp bB    wp wp ## 2
+## wR wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   ##    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp bB    wp wp ## 2
+## wR wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   ##    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp bB    wp wp ## 2
+## wR wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   ##    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp bB    wp wp ## 2
+## wR wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   ##    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp bB    wp wp ## 2
+## wR wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   ##    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp bB    wp wp ## 2
+## wR wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   ##    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp bB    wp wp ## 2
+## wR wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   ##    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp bB    wp wp ## 2
+## wR wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   ##    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp bB    wp wp ## 2
+## wR wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   ##    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp bB    wp wp ## 2
+## wR wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   ##    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp bB    wp wp ## 2
+## wR wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   ##    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp bB    wp wp ## 2
+## wR wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   ##    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp bB    wp wp ## 2
+## wR wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   ##    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp bB    wp wp ## 2
+## wR wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   ##    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp bB    wp wp ## 2
+## wR wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   ##    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp bB    wp wp ## 2
+## wR wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   ##    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp bB    wp wp ## 2
+## wR wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   ##    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp bB    wp wp ## 2
+## wR wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   ##    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp bB    wp wp ## 2
+## wR wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   ##    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp bB    wp wp ## 2
+## wR wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   ##    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp bB    wp wp ## 2
+## wR wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   ##    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp bB    wp wp ## 2
+## wR wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   ##    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp bB    wp wp ## 2
+## wR wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   ##    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp bB    wp wp ## 2
+## wR wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   ##    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp bB    wp wp ## 2
+## wR wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   ##    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp bB    wp wp ## 2
+## wR wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   ##    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp bB    wp wp ## 2
+## wR wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   ##    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp bB    wp wp ## 2
+## wR wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   ##    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp bB    wp wp ## 2
+## wR wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   ##    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp bB    wp wp ## 2
+## wR wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   ##    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp bB    wp wp ## 2
+## wR wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   ##    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp bB    wp wp ## 2
+## wR wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   ##    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp bB    wp wp ## 2
+## wR wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   ##    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp bB    wp wp ## 2
+## wR wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   ##    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp bB    wp wp ## 2
+## wR wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   ##    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp bB    wp wp ## 2
+## wR wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   ##    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp bB    wp wp ## 2
+## wR wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   ##    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp bB    wp wp ## 2
+## wR wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   ##    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp bB    wp wp ## 2
+## wR wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   ##    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp bB    wp wp ## 2
+## wR wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   ##    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp bB    wp wp ## 2
+## wR wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   ##    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp bB    wp wp ## 2
+## wR wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   ##    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp bB    wp wp ## 2
+## wR wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   ##    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp bB    wp wp ## 2
+## wR wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   ##    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp bB    wp wp ## 2
+## wR wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   ##    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp bB    wp wp ## 2
+## wR wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   ##    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp bB    wp wp ## 2
+## wR wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   ##    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp bB    wp wp ## 2
+## wR wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   ##    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp bB    wp wp ## 2
+## wR wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   ##    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp bB    wp wp ## 2
+## wR wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   ##    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp bB    wp wp ## 2
+## wR wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   ##    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp bB    wp wp ## 2
+## wR wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+ILLEGAL_MOVE
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   ##    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp bB    wp wp ## 2
+## wR wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
+
+RESIGN_BLACK_WINS
+
+bR bN bB bQ bK ## bN bR 8
+bp bp bp    ##    bp    7
+   ##    ##    ##    ## 6
+## wN ## wp bp bp ## bp 5
+   ##    ##    ##    wp 4
+##    ##    ## wN ##    3
+wp wp wp bB    wp wp ## 2
+## wR wB wQ wK wB ## wR 1
+ a  b  c  d  e  f  g  h
+
