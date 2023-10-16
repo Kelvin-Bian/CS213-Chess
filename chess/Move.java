@@ -94,6 +94,11 @@ public class Move {
                 invalid = true; //does move follow piece rules?
                 return false;
             }
+            boolean isPawn = PieceUtility.isPawn(movePiece);
+            if(promoType!=null && ((isPawn && !Pawn.canPromote(end, movePiece)) || !isPawn)){
+                invalid= true; //if move includes promotion but not pawn or pawn does not meet conditions 
+                return false;
+            }
             //is capture on king?
             captured = PieceUtility.findPiece(end, pieces);
             if(captured != null && PieceUtility.isKing(captured))
@@ -137,6 +142,9 @@ public class Move {
         PieceUtility.movePiece(movePiece, end); //update rank and file in returnpiece
         //pawn promotion automatic/explicit
         if(Pawn.canPromote(end, movePiece)){
+            if(promoType== null){
+                promoType = (whiteTurn)? PieceType.WQ: PieceType.BQ;
+            }
             PieceUtility.promotion(movePiece, promoType);
         }
     }
@@ -147,6 +155,7 @@ public class Move {
         }
         PieceUtility.movePiece(movePiece, start);
     }
+    
     public ReturnPlay returnPlay(boolean whiteCheck, boolean blackCheck, ArrayList<ReturnPiece> pieces){
         ReturnPlay r = new ReturnPlay();
         if(resign) {
