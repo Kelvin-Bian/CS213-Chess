@@ -65,12 +65,12 @@ public class King {
                     PieceUtility.movePiece(n, Position.right(n));
                     if (!Check.whiteCheck(piecesOnBoard)) {
                         PieceUtility.movePiece(n, startPosition);
-                        
                         return 1;
                     }
                 }
             }
         }
+        PieceUtility.movePiece(n, startPosition);
 
         // check if white queenside castling is possible and for correct king and rook position and movement
         if (whiteKing && Chess.whiteQueensideCastlePossible && n.pieceRank == 1 && n.pieceFile == PieceFile.e && end.r() == 1 && end.f() == PieceFile.c && PieceUtility.findPiece(new Position(1, PieceFile.a), piecesOnBoard).pieceType == PieceType.WR) {
@@ -81,12 +81,12 @@ public class King {
                     PieceUtility.movePiece(n, Position.left(n));
                     if (PieceUtility.findPiece(Position.left(n), piecesOnBoard) == null && !Check.whiteCheck(piecesOnBoard)) {
                         PieceUtility.movePiece(n, startPosition);
-                        
                         return 2;
                     }
                 }
             }
         }
+        PieceUtility.movePiece(n, startPosition);
 
         // check for BLACK KING CASTLING
         // Kingside castling
@@ -99,12 +99,12 @@ public class King {
                     PieceUtility.movePiece(n, Position.right(n));
                     if (!Check.blackCheck(piecesOnBoard)) {
                         PieceUtility.movePiece(n, startPosition);
-                        
                         return 3;
                     }
                 }
             }
         }
+        PieceUtility.movePiece(n, startPosition);
 
         // check if black queenside castling is possible and for correct king and rook position and movement
         if (!whiteKing &&Chess.blackQueensideCastlePossible && n.pieceRank == 8 && n.pieceFile == PieceFile.e && end.r() == 8 && end.f() == PieceFile.c && PieceUtility.findPiece(new Position(8, PieceFile.a), piecesOnBoard).pieceType == PieceType.BR) {
@@ -120,6 +120,7 @@ public class King {
                 }
             }
         }
+        PieceUtility.movePiece(n, startPosition);
         return -1;
     }
 }

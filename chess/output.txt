@@ -1,0 +1,129 @@
+bR bN bB bQ bK bB bN bR 8
+bp bp bp bp bp bp bp bp 7
+   ##    ##    ##    ## 6
+##    ##    ##    ##    5
+   ##    ##    ##    ## 4
+##    ##    ##    ##    3
+wp wp wp wp wp wp wp wp 2
+wR wN wB wQ wK wB wN wR 1
+ a  b  c  d  e  f  g  h
+1
+
+bR bN bB bQ bK bB bN bR 8
+bp bp bp bp bp bp bp bp 7
+   ##    ##    ##    ## 6
+##    ##    ##    ##    5
+   ##    ## wp ##    ## 4
+##    ##    ##    ##    3
+wp wp wp wp    wp wp wp 2
+wR wN wB wQ wK wB wN wR 1
+ a  b  c  d  e  f  g  h
+
+2
+
+bR bN bB bQ bK bB bN bR 8
+bp bp bp bp ## bp bp bp 7
+   ##    ##    ##    ## 6
+##    ##    bp    ##    5
+   ##    ## wp ##    ## 4
+##    ##    ##    ##    3
+wp wp wp wp    wp wp wp 2
+wR wN wB wQ wK wB wN wR 1
+ a  b  c  d  e  f  g  h
+
+3
+
+bR bN bB bQ bK bB bN bR 8
+bp bp bp bp ## bp bp bp 7
+   ##    ##    ##    ## 6
+##    ##    bp    ##    5
+   ##    ## wp ##    ## 4
+##    ##    ##    ##    3
+wp wp wp wp wB wp wp wp 2
+wR wN wB wQ wK    wN wR 1
+ a  b  c  d  e  f  g  h
+
+4
+
+bR bN bB bQ bK bB bN bR 8
+bp bp bp bp ##    bp bp 7
+   ##    ##    ##    ## 6
+##    ##    bp bp ##    5
+   ##    ## wp ##    ## 4
+##    ##    ##    ##    3
+wp wp wp wp wB wp wp wp 2
+wR wN wB wQ wK    wN wR 1
+ a  b  c  d  e  f  g  h
+
+5
+
+bR bN bB bQ bK bB bN bR 8
+bp bp bp bp ##    bp bp 7
+   ##    ##    ##    ## 6
+##    ##    bp bp ##    5
+   ##    ## wp ##    ## 4
+##    ## wp ##    ##    3
+wp wp wp ## wB wp wp wp 2
+wR wN wB wQ wK    wN wR 1
+ a  b  c  d  e  f  g  h
+
+6
+
+bR bN bB bQ bK bB    bR 8
+bp bp bp bp ##    bp bp 7
+   ##    ##    bN    ## 6
+##    ##    bp bp ##    5
+   ##    ## wp ##    ## 4
+##    ## wp ##    ##    3
+wp wp wp ## wB wp wp wp 2
+wR wN wB wQ wK    wN wR 1
+ a  b  c  d  e  f  g  h
+
+7
+
+bR bN bB bQ bK bB    bR 8
+bp bp bp bp ##    bp bp 7
+   ##    ##    bN    ## 6
+##    ##    bp bp ##    5
+   ##    ## wp ##    ## 4
+##    ## wp ## wN ##    3
+wp wp wp ## wB wp wp wp 2
+wR wN wB wQ wK    ## wR 1
+ a  b  c  d  e  f  g  h
+
+8
+
+bR bN bB bQ bK ##    bR 8
+bp bp bp bp ##    bp bp 7
+   ##    ##    bN    ## 6
+##    bB    bp bp ##    5
+   ##    ## wp ##    ## 4
+##    ## wp ## wN ##    3
+wp wp wp ## wB wp wp wp 2
+wR wN wB wQ wK    ## wR 1
+ a  b  c  d  e  f  g  h
+
+9
+
+bR bN bB bQ bK ##    bR 8
+bp bp bp bp ##    bp bp 7
+   ##    ##    bN    ## 6
+##    bB    bp bp ##    5
+   ##    ## wp ##    ## 4
+##    ## wp ## wN ## wp 3
+wp wp wp ## wB wp wp ## 2
+wR wN wB wQ wK    ## wR 1
+ a  b  c  d  e  f  g  h
+
+10
+
+bR bN bB bQ    bR bK ## 8
+bp bp bp bp ##    bp bp 7
+   ##    ##    bN    ## 6
+##    bB    bp bp ##    5
+   ##    ## wp ##    ## 4
+##    ## wp ## wN ## wp 3
+wp wp wp ## wB wp wp ## 2
+wR wN wB wQ wK    ## wR 1
+ a  b  c  d  e  f  g  h
+
