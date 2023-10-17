@@ -176,8 +176,6 @@ public class Move {
                 reverseMove(pieces);
             }
             else{
-                if(promoType != null && !Pawn.canPromote(end, movePiece))
-                    r.message = Message.ILLEGAL_MOVE;
                 if(draw)
                     r.message = Message.DRAW;
                 else if((whiteTurn && Check.blackCheck(pieces))){
