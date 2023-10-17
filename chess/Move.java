@@ -139,6 +139,12 @@ public class Move {
             captured = Chess.prev.movePiece;
             pieces.remove(captured);
         }
+        if(PieceUtility.isKing(movePiece)){
+            int castletype = King.checkCastling(end, movePiece, pieces); 
+            //move rook if castling
+            if(castletype!= -1)
+                Rook.castleMove(castletype, pieces);
+        }
         PieceUtility.movePiece(movePiece, end); //update rank and file in returnpiece
         //pawn promotion automatic/explicit
         if(Pawn.canPromote(end, movePiece)){

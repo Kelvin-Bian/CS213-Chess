@@ -22,89 +22,7 @@ public class King {
             }
         }
 
-        // check for WHITE KING CASTLING
-        // Kingside castling
-        // check if white kingside castling is possible and for correct king and rook position and movement
-        if (Chess.whiteKingsideCastlePossible && n.pieceRank == 1 && n.pieceFile == PieceFile.e && end.r() == 1 && end.f() == PieceFile.g && PieceUtility.findPiece(new Position(1, PieceFile.h), piecesOnBoard).pieceType == PieceType.WR) {
-            //check if squares that king moves through are not occupied or in check (would make castling illegal)
-            if (PieceUtility.findPiece(Position.right(n), piecesOnBoard) == null && !Check.whiteCheck(piecesOnBoard)) {
-                PieceUtility.movePiece(n, Position.right(n));
-                if (PieceUtility.findPiece(Position.right(n), piecesOnBoard) == null && !Check.whiteCheck(piecesOnBoard)) {
-                    PieceUtility.movePiece(n, Position.right(n));
-                    if (!Check.whiteCheck(piecesOnBoard)) {
-                        PieceUtility.movePiece(n, startPosition);
-                        if (!Check.checkmateChecking) {
-                            PieceUtility.movePiece(PieceUtility.findPiece(new Position(1, PieceFile.h), piecesOnBoard), new Position(1, PieceFile.f));
-                            Chess.whiteKingsideCastlePossible = false;
-                            Chess.whiteQueensideCastlePossible = false;
-                        }
-                        return true;
-                    }
-                }
-            }
-        }
-
-        // check if white queenside castling is possible and for correct king and rook position and movement
-        if (Chess.whiteQueensideCastlePossible && n.pieceRank == 1 && n.pieceFile == PieceFile.e && end.r() == 1 && end.f() == PieceFile.c && PieceUtility.findPiece(new Position(1, PieceFile.a), piecesOnBoard).pieceType == PieceType.WR) {
-            //check if squares that king moves through are not occupied or in check (would make castling illegal) [AND for white queenside, check if b1 is not occupied for rook to move through]
-            if (PieceUtility.findPiece(Position.left(n), piecesOnBoard) == null && !Check.whiteCheck(piecesOnBoard)) {
-                PieceUtility.movePiece(n, Position.left(n));
-                if (PieceUtility.findPiece(Position.left(n), piecesOnBoard) == null && !Check.whiteCheck(piecesOnBoard)) {
-                    PieceUtility.movePiece(n, Position.left(n));
-                    if (PieceUtility.findPiece(Position.left(n), piecesOnBoard) == null && !Check.whiteCheck(piecesOnBoard)) {
-                        PieceUtility.movePiece(n, startPosition);
-                        if (!Check.checkmateChecking) {
-                            PieceUtility.movePiece(PieceUtility.findPiece(new Position(1, PieceFile.a), piecesOnBoard), new Position(1, PieceFile.d));
-                            Chess.whiteKingsideCastlePossible = false;
-                            Chess.whiteQueensideCastlePossible = false;        
-                        }
-                        return true;
-                    }
-                }
-            }
-        }
-
-        // check for BLACK KING CASTLING
-        // Kingside castling
-        // check if black kingside castling is possible and for correct king and rook position and movement
-        if (Chess.blackKingsideCastlePossible && n.pieceRank == 8 && n.pieceFile == PieceFile.e && end.r() == 8 && end.f() == PieceFile.g && PieceUtility.findPiece(new Position(8, PieceFile.h), piecesOnBoard).pieceType == PieceType.BR) {
-            //check if squares that king moves through are not occupied or in check (would make castling illegal)
-            if (PieceUtility.findPiece(Position.right(n), piecesOnBoard) == null && !Check.blackCheck(piecesOnBoard)) {
-                PieceUtility.movePiece(n, Position.right(n));
-                if (PieceUtility.findPiece(Position.right(n), piecesOnBoard) == null && !Check.blackCheck(piecesOnBoard)) {
-                    PieceUtility.movePiece(n, Position.right(n));
-                    if (!Check.blackCheck(piecesOnBoard)) {
-                        PieceUtility.movePiece(n, startPosition);
-                        if (!Check.checkmateChecking) {
-                            PieceUtility.movePiece(PieceUtility.findPiece(new Position(8, PieceFile.h), piecesOnBoard), new Position(8, PieceFile.f));
-                            Chess.blackKingsideCastlePossible = false;
-                            Chess.blackQueensideCastlePossible = false;
-                        }
-                        return true;
-                    }
-                }
-            }
-        }
-
-        // check if black queenside castling is possible and for correct king and rook position and movement
-        if (Chess.blackQueensideCastlePossible && n.pieceRank == 8 && n.pieceFile == PieceFile.e && end.r() == 8 && end.f() == PieceFile.c && PieceUtility.findPiece(new Position(8, PieceFile.a), piecesOnBoard).pieceType == PieceType.BR) {
-            //check if squares that king moves through are not occupied or in check (would make castling illegal) [AND for black queenside, check if b8 is not occupied for rook to move through]
-            if (PieceUtility.findPiece(Position.left(n), piecesOnBoard) == null && !Check.blackCheck(piecesOnBoard)) {
-                PieceUtility.movePiece(n, Position.left(n));
-                if (PieceUtility.findPiece(Position.left(n), piecesOnBoard) == null && !Check.blackCheck(piecesOnBoard)) {
-                    PieceUtility.movePiece(n, Position.left(n));
-                    if (PieceUtility.findPiece(Position.left(n), piecesOnBoard) == null && !Check.blackCheck(piecesOnBoard)) {
-                        PieceUtility.movePiece(n, startPosition);
-                        if (!Check.checkmateChecking) {
-                            PieceUtility.movePiece(PieceUtility.findPiece(new Position(8, PieceFile.a), piecesOnBoard), new Position(8, PieceFile.d));
-                            Chess.blackKingsideCastlePossible = false;
-                            Chess.blackQueensideCastlePossible = false;
-                        }
-                        return true;
-                    }
-                }
-            }
-        }
+        if(checkCastling(end, n, piecesOnBoard)>0) return true;
 
         // Check to see if target square follows Knight movement pattern
         int fileOne = Character.getNumericValue(startFile.toString().charAt(0));
@@ -124,5 +42,84 @@ public class King {
         }
 
         return false;
+    }
+
+    //returns -1 if move isn't valid castling OR int btwn 1-4 for valid castling
+    public static int checkCastling(Position end, ReturnPiece n, ArrayList<ReturnPiece> piecesOnBoard) {
+        //check if move is castling and if it's valid 
+        PieceFile startFile = n.pieceFile;
+        PieceFile endFile = end.f();
+        int startRank = n.pieceRank;
+        int endRank = end.r();
+        Position startPosition = Position.getPosition(n);
+        boolean whiteKing = PieceUtility.isWhite(n);
+
+        // check for WHITE KING CASTLING
+        // Kingside castling
+        // check if white kingside castling is possible and for correct king and rook position and movement
+        if (whiteKing && Chess.whiteKingsideCastlePossible && n.pieceRank == 1 && n.pieceFile == PieceFile.e && end.r() == 1 && end.f() == PieceFile.g && PieceUtility.findPiece(new Position(1, PieceFile.h), piecesOnBoard).pieceType == PieceType.WR) {
+            //check if squares that king moves through are not occupied or in check (would make castling illegal)
+            if (PieceUtility.findPiece(Position.right(n), piecesOnBoard) == null && !Check.whiteCheck(piecesOnBoard)) {
+                PieceUtility.movePiece(n, Position.right(n));
+                if (PieceUtility.findPiece(Position.right(n), piecesOnBoard) == null && !Check.whiteCheck(piecesOnBoard)) {
+                    PieceUtility.movePiece(n, Position.right(n));
+                    if (!Check.whiteCheck(piecesOnBoard)) {
+                        PieceUtility.movePiece(n, startPosition);
+                        
+                        return 1;
+                    }
+                }
+            }
+        }
+
+        // check if white queenside castling is possible and for correct king and rook position and movement
+        if (whiteKing && Chess.whiteQueensideCastlePossible && n.pieceRank == 1 && n.pieceFile == PieceFile.e && end.r() == 1 && end.f() == PieceFile.c && PieceUtility.findPiece(new Position(1, PieceFile.a), piecesOnBoard).pieceType == PieceType.WR) {
+            //check if squares that king moves through are not occupied or in check (would make castling illegal) [AND for white queenside, check if b1 is not occupied for rook to move through]
+            if (PieceUtility.findPiece(Position.left(n), piecesOnBoard) == null && !Check.whiteCheck(piecesOnBoard)) {
+                PieceUtility.movePiece(n, Position.left(n));
+                if (PieceUtility.findPiece(Position.left(n), piecesOnBoard) == null && !Check.whiteCheck(piecesOnBoard)) {
+                    PieceUtility.movePiece(n, Position.left(n));
+                    if (PieceUtility.findPiece(Position.left(n), piecesOnBoard) == null && !Check.whiteCheck(piecesOnBoard)) {
+                        PieceUtility.movePiece(n, startPosition);
+                        
+                        return 2;
+                    }
+                }
+            }
+        }
+
+        // check for BLACK KING CASTLING
+        // Kingside castling
+        // check if black kingside castling is possible and for correct king and rook position and movement
+        if (!whiteKing &&Chess.blackKingsideCastlePossible && n.pieceRank == 8 && n.pieceFile == PieceFile.e && end.r() == 8 && end.f() == PieceFile.g && PieceUtility.findPiece(new Position(8, PieceFile.h), piecesOnBoard).pieceType == PieceType.BR) {
+            //check if squares that king moves through are not occupied or in check (would make castling illegal)
+            if (PieceUtility.findPiece(Position.right(n), piecesOnBoard) == null && !Check.blackCheck(piecesOnBoard)) {
+                PieceUtility.movePiece(n, Position.right(n));
+                if (PieceUtility.findPiece(Position.right(n), piecesOnBoard) == null && !Check.blackCheck(piecesOnBoard)) {
+                    PieceUtility.movePiece(n, Position.right(n));
+                    if (!Check.blackCheck(piecesOnBoard)) {
+                        PieceUtility.movePiece(n, startPosition);
+                        
+                        return 3;
+                    }
+                }
+            }
+        }
+
+        // check if black queenside castling is possible and for correct king and rook position and movement
+        if (!whiteKing &&Chess.blackQueensideCastlePossible && n.pieceRank == 8 && n.pieceFile == PieceFile.e && end.r() == 8 && end.f() == PieceFile.c && PieceUtility.findPiece(new Position(8, PieceFile.a), piecesOnBoard).pieceType == PieceType.BR) {
+            //check if squares that king moves through are not occupied or in check (would make castling illegal) [AND for black queenside, check if b8 is not occupied for rook to move through]
+            if (PieceUtility.findPiece(Position.left(n), piecesOnBoard) == null && !Check.blackCheck(piecesOnBoard)) {
+                PieceUtility.movePiece(n, Position.left(n));
+                if (PieceUtility.findPiece(Position.left(n), piecesOnBoard) == null && !Check.blackCheck(piecesOnBoard)) {
+                    PieceUtility.movePiece(n, Position.left(n));
+                    if (PieceUtility.findPiece(Position.left(n), piecesOnBoard) == null && !Check.blackCheck(piecesOnBoard)) {
+                        PieceUtility.movePiece(n, startPosition);
+                        return 4;
+                    }
+                }
+            }
+        }
+        return -1;
     }
 }

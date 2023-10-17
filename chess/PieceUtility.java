@@ -20,6 +20,7 @@ public class PieceUtility {
         return p.pieceType.name().charAt(0)=='W';
     }
 
+
     public static int fileInt(ReturnPiece rp){
         return (""+rp.pieceFile).charAt(0) - 'a';
     }
