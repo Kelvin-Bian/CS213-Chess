@@ -13,7 +13,7 @@ public class Pawn{
         return captureMove(end, p, piecesOnBoard); //valid capture move
     }
     public static boolean validEnPassant(Position end, ReturnPiece p, ArrayList<ReturnPiece> pieces){
-        if(Chess.enPassantPossible && end.equals(Position.squareBtwn(Chess.prev.start, Chess.prev.end))){
+        if(Chess.enPassantPossible && !PieceUtility.sameSide(p, Chess.prev.movePiece) &&end.equals(Position.squareBtwn(Chess.prev.start, Chess.prev.end))){
                 //is ending square btwn start and end of prev pawn move
                 //is ending square empty and diagonally forward from cur square?
                 if(isCaptureSquare( end, p) && PieceUtility.findPiece(end, pieces)==null)

@@ -12,7 +12,7 @@ public class PlayChess {
 		// Scanner sc = new Scanner(System.in);
 		int movecounter = 0;
 
-		File input = new File("./chess/input.txt");
+		File input = new File("./chess/checkmate.txt");
 		FileOutputStream output = new FileOutputStream("./chess/output.txt");
 		System.out.println(input.getCanonicalPath());
 		Scanner sc = new Scanner(input);
