@@ -1,3 +1,4 @@
+// Kelvin Bian and Jessica Luo
 package chess;
 
 import java.util.ArrayList;
