@@ -1,4 +1,5 @@
-//Jessica Luo and Kelvin Bian
+
+// Kelvin Bian and Jessica Luo
 
 package chess;
 
