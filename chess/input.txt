@@ -1,6 +1,6 @@
 e2 e4
 e7 e5
-f1 c4
+f1 e2
 f7 f5
 d2 d3
 g8 f6

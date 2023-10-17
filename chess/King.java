@@ -65,8 +65,6 @@ public class King {
                     PieceUtility.movePiece(n, Position.right(n));
                     if (!Check.whiteCheck(piecesOnBoard)) {
                         PieceUtility.movePiece(n, startPosition);
-                        Chess.whiteKingsideCastlePossible = false;
-                        Chess.whiteQueensideCastlePossible = false;
                         return 1;
                     }
                 }
@@ -83,8 +81,6 @@ public class King {
                     PieceUtility.movePiece(n, Position.left(n));
                     if (PieceUtility.findPiece(Position.left(n), piecesOnBoard) == null && !Check.whiteCheck(piecesOnBoard)) {
                         PieceUtility.movePiece(n, startPosition);
-                        Chess.whiteKingsideCastlePossible = false;
-                        Chess.whiteQueensideCastlePossible = false;
                         return 2;
                     }
                 }
@@ -103,8 +99,6 @@ public class King {
                     PieceUtility.movePiece(n, Position.right(n));
                     if (!Check.blackCheck(piecesOnBoard)) {
                         PieceUtility.movePiece(n, startPosition);
-                        Chess.blackKingsideCastlePossible = false;
-                        Chess.blackQueensideCastlePossible = false;
                         return 3;
                     }
                 }
@@ -121,8 +115,6 @@ public class King {
                     PieceUtility.movePiece(n, Position.left(n));
                     if (PieceUtility.findPiece(Position.left(n), piecesOnBoard) == null && !Check.blackCheck(piecesOnBoard)) {
                         PieceUtility.movePiece(n, startPosition);
-                        Chess.blackKingsideCastlePossible = false;
-                        Chess.blackQueensideCastlePossible = false;
                         return 4;
                     }
                 }

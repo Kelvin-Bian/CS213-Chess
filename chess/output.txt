@@ -37,9 +37,9 @@ bR bN bB bQ bK bB bN bR 8
 bp bp bp bp ## bp bp bp 7
    ##    ##    ##    ## 6
 ##    ##    bp    ##    5
-   ## wB ## wp ##    ## 4
+   ##    ## wp ##    ## 4
 ##    ##    ##    ##    3
-wp wp wp wp    wp wp wp 2
+wp wp wp wp wB wp wp wp 2
 wR wN wB wQ wK    wN wR 1
  a  b  c  d  e  f  g  h
 
@@ -49,9 +49,9 @@ bR bN bB bQ bK bB bN bR 8
 bp bp bp bp ##    bp bp 7
    ##    ##    ##    ## 6
 ##    ##    bp bp ##    5
-   ## wB ## wp ##    ## 4
+   ##    ## wp ##    ## 4
 ##    ##    ##    ##    3
-wp wp wp wp    wp wp wp 2
+wp wp wp wp wB wp wp wp 2
 wR wN wB wQ wK    wN wR 1
  a  b  c  d  e  f  g  h
 
@@ -61,9 +61,9 @@ bR bN bB bQ bK bB bN bR 8
 bp bp bp bp ##    bp bp 7
    ##    ##    ##    ## 6
 ##    ##    bp bp ##    5
-   ## wB ## wp ##    ## 4
+   ##    ## wp ##    ## 4
 ##    ## wp ##    ##    3
-wp wp wp ##    wp wp wp 2
+wp wp wp ## wB wp wp wp 2
 wR wN wB wQ wK    wN wR 1
  a  b  c  d  e  f  g  h
 
@@ -73,9 +73,9 @@ bR bN bB bQ bK bB    bR 8
 bp bp bp bp ##    bp bp 7
    ##    ##    bN    ## 6
 ##    ##    bp bp ##    5
-   ## wB ## wp ##    ## 4
+   ##    ## wp ##    ## 4
 ##    ## wp ##    ##    3
-wp wp wp ##    wp wp wp 2
+wp wp wp ## wB wp wp wp 2
 wR wN wB wQ wK    wN wR 1
  a  b  c  d  e  f  g  h
 
@@ -85,9 +85,9 @@ bR bN bB bQ bK bB    bR 8
 bp bp bp bp ##    bp bp 7
    ##    ##    bN    ## 6
 ##    ##    bp bp ##    5
-   ## wB ## wp ##    ## 4
+   ##    ## wp ##    ## 4
 ##    ## wp ## wN ##    3
-wp wp wp ##    wp wp wp 2
+wp wp wp ## wB wp wp wp 2
 wR wN wB wQ wK    ## wR 1
  a  b  c  d  e  f  g  h
 
@@ -97,9 +97,9 @@ bR bN bB bQ bK ##    bR 8
 bp bp bp bp ##    bp bp 7
    ##    ##    bN    ## 6
 ##    bB    bp bp ##    5
-   ## wB ## wp ##    ## 4
+   ##    ## wp ##    ## 4
 ##    ## wp ## wN ##    3
-wp wp wp ##    wp wp wp 2
+wp wp wp ## wB wp wp wp 2
 wR wN wB wQ wK    ## wR 1
  a  b  c  d  e  f  g  h
 
@@ -109,23 +109,21 @@ bR bN bB bQ bK ##    bR 8
 bp bp bp bp ##    bp bp 7
    ##    ##    bN    ## 6
 ##    bB    bp bp ##    5
-   ## wB ## wp ##    ## 4
+   ##    ## wp ##    ## 4
 ##    ## wp ## wN ## wp 3
-wp wp wp ##    wp wp ## 2
+wp wp wp ## wB wp wp ## 2
 wR wN wB wQ wK    ## wR 1
  a  b  c  d  e  f  g  h
 
 10
 
-ILLEGAL_MOVE
-
-bR bN bB bQ bK ##    bR 8
+bR bN bB bQ    bR bK ## 8
 bp bp bp bp ##    bp bp 7
    ##    ##    bN    ## 6
 ##    bB    bp bp ##    5
-   ## wB ## wp ##    ## 4
+   ##    ## wp ##    ## 4
 ##    ## wp ## wN ## wp 3
-wp wp wp ##    wp wp ## 2
+wp wp wp ## wB wp wp ## 2
 wR wN wB wQ wK    ## wR 1
  a  b  c  d  e  f  g  h
 
