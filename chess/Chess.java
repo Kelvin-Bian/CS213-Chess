@@ -77,6 +77,7 @@ public class Chess {
 	 */
 	public static void start() {
 		/* FILL IN THIS METHOD */
+		board = new HashMap<>();
 		whiteKingsideCastlePossible = true;
 		blackKingsideCastlePossible = true;
 		whiteQueensideCastlePossible = true;
