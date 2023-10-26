@@ -6,6 +6,8 @@ package chess;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import javax.swing.text.Position;
+
 class ReturnPiece {
 	static enum PieceType {WP, WR, WN, WB, WQ, WK, BP, BR, BN, BB, BK, BQ};
 	static enum PieceFile {a, b, c, d, e, f, g, h};
@@ -88,6 +90,5 @@ public class Chess {
 			pieces.add(p);
 		}
 		whiteTurn = true;
-		PlayChess.printBoard(pieces);
 	}
 }
